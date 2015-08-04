@@ -86,6 +86,19 @@ func (m *Marshaller) MarshalToString(pb proto.Message) (string, error) {
 
 // marshalObject writes a struct to the Writer.
 func (m *Marshaller) marshalObject(out *errWriter, v proto.Message, indent string) error {
+	// Prefer specialized marshalers if available
+	if mlr, ok := v.(json.Marshaler); ok {
+		bs, err := mlr.MarshalJSON()
+		if err != nil {
+			return err
+		}
+		if out.err != nil {
+			return out.err
+		}
+		_, out.err = out.writer.Write(bs)
+		return out.err
+	}
+
 	out.write("{")
 	if m.Indent != "" {
 		out.write("\n")
@@ -293,6 +306,11 @@ func UnmarshalString(str string, pb proto.Message) error {
 
 // unmarshalValue converts/copies a value into the target.
 func unmarshalValue(target reflect.Value, inputValue json.RawMessage) error {
+	// Prefer specialized marshalers if available
+	if ulr, ok := target.Addr().Interface().(json.Unmarshaler); ok {
+		return ulr.UnmarshalJSON(inputValue)
+	}
+
 	targetType := target.Type()
 
 	// Allocate memory for pointer fields.

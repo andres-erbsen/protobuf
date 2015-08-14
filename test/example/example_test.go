@@ -1,5 +1,7 @@
-// Copyright (c) 2015, Vastech SA (PTY) LTD. All rights reserved.
-// http://github.com/gogo/protobuf/gogoproto
+// Extensions for Protocol Buffers to create more go like structures.
+//
+// Copyright (c) 2013, Vastech SA (PTY) LTD. All rights reserved.
+// http://github.com/andres-erbsen/protobuf/gogoproto
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -24,11 +26,10 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-syntax = "proto2";
+package test
 
-package vanity;
+import "testing"
 
-message A {
-	optional string Strings = 1;
-	required int64 Int = 2;
+func TestGetterExists(t *testing.T) {
+	_ = (&CastType{}).GetInt32()
 }

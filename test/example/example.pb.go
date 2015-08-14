@@ -147,6 +147,13 @@ type CastType struct {
 func (m *CastType) Reset()      { *m = CastType{} }
 func (*CastType) ProtoMessage() {}
 
+func (m *CastType) GetInt32() int32 {
+	if m != nil && m.Int32 != nil {
+		return *m.Int32
+	}
+	return 0
+}
+
 func (m *A) Unmarshal(data []byte) error {
 	l := len(data)
 	iNdEx := 0
@@ -1215,7 +1222,7 @@ func (m *A) Marshal() (data []byte, err error) {
 	return data[:n], nil
 }
 
-func (m *A) MarshalTo(data []byte) (n int, err error) {
+func (m *A) MarshalTo(data []byte) (int, error) {
 	var i int
 	_ = i
 	var l int
@@ -1251,7 +1258,7 @@ func (m *B) Marshal() (data []byte, err error) {
 	return data[:n], nil
 }
 
-func (m *B) MarshalTo(data []byte) (n int, err error) {
+func (m *B) MarshalTo(data []byte) (int, error) {
 	var i int
 	_ = i
 	var l int
@@ -1292,7 +1299,7 @@ func (m *C) Marshal() (data []byte, err error) {
 	return data[:n], nil
 }
 
-func (m *C) MarshalTo(data []byte) (n int, err error) {
+func (m *C) MarshalTo(data []byte) (int, error) {
 	var i int
 	_ = i
 	var l int
@@ -1318,7 +1325,7 @@ func (m *U) Marshal() (data []byte, err error) {
 	return data[:n], nil
 }
 
-func (m *U) MarshalTo(data []byte) (n int, err error) {
+func (m *U) MarshalTo(data []byte) (int, error) {
 	var i int
 	_ = i
 	var l int
@@ -1359,7 +1366,7 @@ func (m *E) Marshal() (data []byte, err error) {
 	return data[:n], nil
 }
 
-func (m *E) MarshalTo(data []byte) (n int, err error) {
+func (m *E) MarshalTo(data []byte) (int, error) {
 	var i int
 	_ = i
 	var l int
@@ -1383,7 +1390,7 @@ func (m *R) Marshal() (data []byte, err error) {
 	return data[:n], nil
 }
 
-func (m *R) MarshalTo(data []byte) (n int, err error) {
+func (m *R) MarshalTo(data []byte) (int, error) {
 	var i int
 	_ = i
 	var l int
@@ -1406,7 +1413,7 @@ func (m *CastType) Marshal() (data []byte, err error) {
 	return data[:n], nil
 }
 
-func (m *CastType) MarshalTo(data []byte) (n int, err error) {
+func (m *CastType) MarshalTo(data []byte) (int, error) {
 	var i int
 	_ = i
 	var l int

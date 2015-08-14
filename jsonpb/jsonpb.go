@@ -49,7 +49,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/gogo/protobuf/proto"
+	"github.com/andres-erbsen/protobuf/proto"
 )
 
 var (

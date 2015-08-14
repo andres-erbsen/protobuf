@@ -4,7 +4,7 @@
 
 package jsonpb
 
-import proto "github.com/gogo/protobuf/proto"
+import proto "github.com/andres-erbsen/protobuf/proto"
 import math "math"
 
 // Reference imports to suppress errors if they are not otherwise used.

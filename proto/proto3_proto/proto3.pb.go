@@ -15,8 +15,8 @@ It has these top-level messages:
 */
 package proto3_proto
 
-import proto "github.com/gogo/protobuf/proto"
-import testdata "github.com/gogo/protobuf/proto/testdata"
+import proto "github.com/andres-erbsen/protobuf/proto"
+import testdata "github.com/andres-erbsen/protobuf/proto/testdata"
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal

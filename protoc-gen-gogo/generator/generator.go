@@ -1,7 +1,7 @@
 // Extensions for Protocol Buffers to create more go like structures.
 //
 // Copyright (c) 2013, Vastech SA (PTY) LTD. All rights reserved.
-// http://github.com/gogo/protobuf/gogoproto
+// http://github.com/andres-erbsen/protobuf/gogoproto
 //
 // Go support for Protocol Buffers - Google's data interchange format
 //
@@ -55,10 +55,10 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/gogo/protobuf/gogoproto"
-	"github.com/gogo/protobuf/proto"
-	descriptor "github.com/gogo/protobuf/protoc-gen-gogo/descriptor"
-	plugin "github.com/gogo/protobuf/protoc-gen-gogo/plugin"
+	"github.com/andres-erbsen/protobuf/gogoproto"
+	"github.com/andres-erbsen/protobuf/proto"
+	descriptor "github.com/andres-erbsen/protobuf/protoc-gen-gogo/descriptor"
+	plugin "github.com/andres-erbsen/protobuf/protoc-gen-gogo/plugin"
 )
 
 // A Plugin provides functionality to add to the output during Go code generation,
@@ -1201,7 +1201,7 @@ func (g *Generator) generateImports() {
 	// reference it later. The same argument applies to the math package,
 	// for handling bit patterns for floating-point numbers.
 	if gogoproto.ImportsGoGoProto(g.file.FileDescriptorProto) {
-		g.PrintImport(g.Pkg["proto"], g.ImportPrefix+"github.com/gogo/protobuf/proto")
+		g.PrintImport(g.Pkg["proto"], g.ImportPrefix+"github.com/andres-erbsen/protobuf/proto")
 	} else {
 		g.PrintImport(g.Pkg["proto"], g.ImportPrefix+"github.com/golang/protobuf/proto")
 	}
@@ -1247,11 +1247,11 @@ func (g *Generator) generateImports() {
 		p.GenerateImports(g.file)
 		g.P()
 	}
-	g.P("// Reference imports to suppress errors if they are not otherwise used.")
-	g.P("var _ = ", g.Pkg["proto"], ".Marshal")
-	if !g.file.proto3 {
-		g.P("var _ = ", g.Pkg["math"], ".Inf")
-	}
+	// g.P("// Reference imports to suppress errors if they are not otherwise used.")
+	// g.P("var _ = ", g.Pkg["proto"], ".Marshal")
+	// if !g.file.proto3 {
+	// 	g.P("var _ = ", g.Pkg["math"], ".Inf")
+	// }
 	g.P()
 }
 

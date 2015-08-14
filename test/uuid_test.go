@@ -1,7 +1,7 @@
 package test
 
 import (
-	"github.com/gogo/protobuf/proto"
+	"github.com/andres-erbsen/protobuf/proto"
 	"testing"
 )
 

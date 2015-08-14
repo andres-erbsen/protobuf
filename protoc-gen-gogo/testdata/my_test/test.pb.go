@@ -20,7 +20,7 @@ It has these top-level messages:
 */
 package my_test
 
-import proto "github.com/gogo/protobuf/proto"
+import proto "github.com/andres-erbsen/protobuf/proto"
 import math "math"
 
 // discarding unused import multitest2 "multi"

@@ -14,12 +14,12 @@
 */
 package moredefaults
 
-import proto "github.com/gogo/protobuf/proto"
+import proto "github.com/andres-erbsen/protobuf/proto"
 import fmt "fmt"
 import math "math"
 
-// discarding unused import gogoproto "github.com/gogo/protobuf/gogoproto"
-import test "github.com/gogo/protobuf/test/example"
+// discarding unused import gogoproto "github.com/andres-erbsen/protobuf/gogoproto"
+import test "github.com/andres-erbsen/protobuf/test/example"
 
 import bytes "bytes"
 

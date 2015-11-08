@@ -69,22 +69,22 @@
 */
 package test
 
-import proto "github.com/gogo/protobuf/proto"
+import proto "github.com/andres-erbsen/protobuf/proto"
 import fmt "fmt"
 import math "math"
 
-// discarding unused import gogoproto "github.com/gogo/protobuf/gogoproto"
+// discarding unused import gogoproto "github.com/andres-erbsen/protobuf/gogoproto"
 
-import github_com_gogo_protobuf_test_custom "github.com/gogo/protobuf/test/custom"
-import github_com_gogo_protobuf_test_custom_dash_type "github.com/gogo/protobuf/test/custom-dash-type"
+import github_com_gogo_protobuf_test_custom "github.com/andres-erbsen/protobuf/test/custom"
+import github_com_gogo_protobuf_test_custom_dash_type "github.com/andres-erbsen/protobuf/test/custom-dash-type"
 
-import google_protobuf "github.com/gogo/protobuf/protoc-gen-gogo/descriptor"
+import google_protobuf "github.com/andres-erbsen/protobuf/protoc-gen-gogo/descriptor"
 
 import strconv "strconv"
 
 import bytes "bytes"
 
-import github_com_gogo_protobuf_proto "github.com/gogo/protobuf/proto"
+import github_com_gogo_protobuf_proto "github.com/andres-erbsen/protobuf/proto"
 
 import strings "strings"
 import sort "sort"
@@ -430,7 +430,7 @@ func (*NinNestedStruct) ProtoMessage() {}
 
 type NidOptCustom struct {
 	Id               Uuid                                         `protobuf:"bytes,1,opt,name=Id,customtype=Uuid" json:"Id"`
-	Value            github_com_gogo_protobuf_test_custom.Uint128 `protobuf:"bytes,2,opt,name=Value,customtype=github.com/gogo/protobuf/test/custom.Uint128" json:"Value"`
+	Value            github_com_gogo_protobuf_test_custom.Uint128 `protobuf:"bytes,2,opt,name=Value,customtype=github.com/andres-erbsen/protobuf/test/custom.Uint128" json:"Value"`
 	XXX_unrecognized []byte                                       `json:"-"`
 }
 
@@ -438,7 +438,7 @@ func (m *NidOptCustom) Reset()      { *m = NidOptCustom{} }
 func (*NidOptCustom) ProtoMessage() {}
 
 type CustomDash struct {
-	Value            *github_com_gogo_protobuf_test_custom_dash_type.Bytes `protobuf:"bytes,1,opt,name=Value,customtype=github.com/gogo/protobuf/test/custom-dash-type.Bytes" json:"Value,omitempty"`
+	Value            *github_com_gogo_protobuf_test_custom_dash_type.Bytes `protobuf:"bytes,1,opt,name=Value,customtype=github.com/andres-erbsen/protobuf/test/custom-dash-type.Bytes" json:"Value,omitempty"`
 	XXX_unrecognized []byte                                                `json:"-"`
 }
 
@@ -447,7 +447,7 @@ func (*CustomDash) ProtoMessage() {}
 
 type NinOptCustom struct {
 	Id               *Uuid                                         `protobuf:"bytes,1,opt,name=Id,customtype=Uuid" json:"Id,omitempty"`
-	Value            *github_com_gogo_protobuf_test_custom.Uint128 `protobuf:"bytes,2,opt,name=Value,customtype=github.com/gogo/protobuf/test/custom.Uint128" json:"Value,omitempty"`
+	Value            *github_com_gogo_protobuf_test_custom.Uint128 `protobuf:"bytes,2,opt,name=Value,customtype=github.com/andres-erbsen/protobuf/test/custom.Uint128" json:"Value,omitempty"`
 	XXX_unrecognized []byte                                        `json:"-"`
 }
 
@@ -456,7 +456,7 @@ func (*NinOptCustom) ProtoMessage() {}
 
 type NidRepCustom struct {
 	Id               []Uuid                                         `protobuf:"bytes,1,rep,name=Id,customtype=Uuid" json:"Id"`
-	Value            []github_com_gogo_protobuf_test_custom.Uint128 `protobuf:"bytes,2,rep,name=Value,customtype=github.com/gogo/protobuf/test/custom.Uint128" json:"Value"`
+	Value            []github_com_gogo_protobuf_test_custom.Uint128 `protobuf:"bytes,2,rep,name=Value,customtype=github.com/andres-erbsen/protobuf/test/custom.Uint128" json:"Value"`
 	XXX_unrecognized []byte                                         `json:"-"`
 }
 
@@ -465,7 +465,7 @@ func (*NidRepCustom) ProtoMessage() {}
 
 type NinRepCustom struct {
 	Id               []Uuid                                         `protobuf:"bytes,1,rep,name=Id,customtype=Uuid" json:"Id,omitempty"`
-	Value            []github_com_gogo_protobuf_test_custom.Uint128 `protobuf:"bytes,2,rep,name=Value,customtype=github.com/gogo/protobuf/test/custom.Uint128" json:"Value,omitempty"`
+	Value            []github_com_gogo_protobuf_test_custom.Uint128 `protobuf:"bytes,2,rep,name=Value,customtype=github.com/andres-erbsen/protobuf/test/custom.Uint128" json:"Value,omitempty"`
 	XXX_unrecognized []byte                                         `json:"-"`
 }
 
@@ -1011,9 +1011,9 @@ func (*CustomNameNinStruct) ProtoMessage() {}
 
 type CustomNameCustomType struct {
 	FieldA           *Uuid                                          `protobuf:"bytes,1,opt,name=Id,customtype=Uuid" json:"Id,omitempty"`
-	FieldB           *github_com_gogo_protobuf_test_custom.Uint128  `protobuf:"bytes,2,opt,name=Value,customtype=github.com/gogo/protobuf/test/custom.Uint128" json:"Value,omitempty"`
+	FieldB           *github_com_gogo_protobuf_test_custom.Uint128  `protobuf:"bytes,2,opt,name=Value,customtype=github.com/andres-erbsen/protobuf/test/custom.Uint128" json:"Value,omitempty"`
 	FieldC           []Uuid                                         `protobuf:"bytes,3,rep,name=Ids,customtype=Uuid" json:"Ids,omitempty"`
-	FieldD           []github_com_gogo_protobuf_test_custom.Uint128 `protobuf:"bytes,4,rep,name=Values,customtype=github.com/gogo/protobuf/test/custom.Uint128" json:"Values,omitempty"`
+	FieldD           []github_com_gogo_protobuf_test_custom.Uint128 `protobuf:"bytes,4,rep,name=Values,customtype=github.com/andres-erbsen/protobuf/test/custom.Uint128" json:"Values,omitempty"`
 	XXX_unrecognized []byte                                         `json:"-"`
 }
 
@@ -2305,7 +2305,7 @@ func ThetestDescription() (desc *google_protobuf.FileDescriptorSet) {
 			OptimizeFor:        func(v google_protobuf.FileOptions_OptimizeMode) *google_protobuf.FileOptions_OptimizeMode { return &v }(1),
 			XXX_extensions:     map[int32]proto.Extension{},
 		},
-	}, {Name: func(v string) *string { return &v }("github.com/gogo/protobuf/gogoproto/gogo.proto"),
+	}, {Name: func(v string) *string { return &v }("github.com/andres-erbsen/protobuf/gogoproto/gogo.proto"),
 		Package:    func(v string) *string { return &v }("gogoproto"),
 		Dependency: []string{"google/protobuf/descriptor.proto"},
 		Extension: []*google_protobuf.FieldDescriptorProto{{Name: func(v string) *string { return &v }("goproto_enum_prefix"),
@@ -2783,7 +2783,7 @@ func ThetestDescription() (desc *google_protobuf.FileDescriptorSet) {
 		},
 	}, {Name: func(v string) *string { return &v }("thetest.proto"),
 		Package:    func(v string) *string { return &v }("test"),
-		Dependency: []string{"github.com/gogo/protobuf/gogoproto/gogo.proto"},
+		Dependency: []string{"github.com/andres-erbsen/protobuf/gogoproto/gogo.proto"},
 		MessageType: []*google_protobuf.DescriptorProto{{Name: func(v string) *string { return &v }("NidOptNative"),
 			Field: []*google_protobuf.FieldDescriptorProto{{Name: func(v string) *string { return &v }("Field1"),
 				Number: func(v int32) *int32 { return &v }(1),

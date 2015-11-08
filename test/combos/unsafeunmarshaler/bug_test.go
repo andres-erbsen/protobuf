@@ -1,5 +1,5 @@
 // Copyright (c) 2013, Vastech SA (PTY) LTD. All rights reserved.
-// http://github.com/gogo/protobuf/gogoproto
+// http://github.com/andres-erbsen/protobuf/gogoproto
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -31,7 +31,7 @@ import (
 	"math"
 	"testing"
 
-	"github.com/gogo/protobuf/proto"
+	"github.com/andres-erbsen/protobuf/proto"
 )
 
 //http://code.google.com/p/goprotobuf/issues/detail?id=39

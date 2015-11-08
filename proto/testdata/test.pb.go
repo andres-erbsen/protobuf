@@ -39,7 +39,7 @@ It has these top-level messages:
 */
 package testdata
 
-import proto "github.com/gogo/protobuf/proto"
+import proto "github.com/andres-erbsen/protobuf/proto"
 import fmt "fmt"
 import math "math"
 

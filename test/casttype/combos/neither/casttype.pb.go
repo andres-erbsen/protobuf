@@ -13,19 +13,19 @@ It has these top-level messages:
 */
 package casttype
 
-import proto "github.com/gogo/protobuf/proto"
+import proto "github.com/andres-erbsen/protobuf/proto"
 import fmt "fmt"
 import math "math"
 
-// discarding unused import gogoproto "github.com/gogo/protobuf/gogoproto"
+// discarding unused import gogoproto "github.com/andres-erbsen/protobuf/gogoproto"
 
-import github_com_gogo_protobuf_test_casttype "github.com/gogo/protobuf/test/casttype"
+import github_com_gogo_protobuf_test_casttype "github.com/andres-erbsen/protobuf/test/casttype"
 
-import google_protobuf "github.com/gogo/protobuf/protoc-gen-gogo/descriptor"
+import google_protobuf "github.com/andres-erbsen/protobuf/protoc-gen-gogo/descriptor"
 
 import bytes "bytes"
 
-import github_com_gogo_protobuf_proto "github.com/gogo/protobuf/proto"
+import github_com_gogo_protobuf_proto "github.com/andres-erbsen/protobuf/proto"
 
 import strings "strings"
 import sort "sort"
@@ -40,11 +40,11 @@ var _ = math.Inf
 type Castaway struct {
 	Int32Ptr         *int32                                                `protobuf:"varint,1,opt,name=Int32Ptr,casttype=int32" json:"Int32Ptr,omitempty"`
 	Int32            int32                                                 `protobuf:"varint,2,opt,name=Int32,casttype=int32" json:"Int32"`
-	MyUint64Ptr      *github_com_gogo_protobuf_test_casttype.MyUint64Type  `protobuf:"varint,3,opt,name=MyUint64Ptr,casttype=github.com/gogo/protobuf/test/casttype.MyUint64Type" json:"MyUint64Ptr,omitempty"`
-	MyUint64         github_com_gogo_protobuf_test_casttype.MyUint64Type   `protobuf:"varint,4,opt,name=MyUint64,casttype=github.com/gogo/protobuf/test/casttype.MyUint64Type" json:"MyUint64"`
-	MyBytes          github_com_gogo_protobuf_test_casttype.Bytes          `protobuf:"bytes,5,opt,name=MyBytes,casttype=github.com/gogo/protobuf/test/casttype.Bytes" json:"MyBytes,omitempty"`
+	MyUint64Ptr      *github_com_gogo_protobuf_test_casttype.MyUint64Type  `protobuf:"varint,3,opt,name=MyUint64Ptr,casttype=github.com/andres-erbsen/protobuf/test/casttype.MyUint64Type" json:"MyUint64Ptr,omitempty"`
+	MyUint64         github_com_gogo_protobuf_test_casttype.MyUint64Type   `protobuf:"varint,4,opt,name=MyUint64,casttype=github.com/andres-erbsen/protobuf/test/casttype.MyUint64Type" json:"MyUint64"`
+	MyBytes          github_com_gogo_protobuf_test_casttype.Bytes          `protobuf:"bytes,5,opt,name=MyBytes,casttype=github.com/andres-erbsen/protobuf/test/casttype.Bytes" json:"MyBytes,omitempty"`
 	NormalBytes      []byte                                                `protobuf:"bytes,6,opt,name=NormalBytes" json:"NormalBytes,omitempty"`
-	MyUint64S        []github_com_gogo_protobuf_test_casttype.MyUint64Type `protobuf:"varint,7,rep,name=MyUint64s,casttype=github.com/gogo/protobuf/test/casttype.MyUint64Type" json:"MyUint64s,omitempty"`
+	MyUint64S        []github_com_gogo_protobuf_test_casttype.MyUint64Type `protobuf:"varint,7,rep,name=MyUint64s,casttype=github.com/andres-erbsen/protobuf/test/casttype.MyUint64Type" json:"MyUint64s,omitempty"`
 	XXX_unrecognized []byte                                                `json:"-"`
 }
 
@@ -1016,7 +1016,7 @@ func CasttypeDescription() (desc *google_protobuf.FileDescriptorSet) {
 			OptimizeFor:        func(v google_protobuf.FileOptions_OptimizeMode) *google_protobuf.FileOptions_OptimizeMode { return &v }(1),
 			XXX_extensions:     map[int32]proto.Extension{},
 		},
-	}, {Name: func(v string) *string { return &v }("github.com/gogo/protobuf/gogoproto/gogo.proto"),
+	}, {Name: func(v string) *string { return &v }("github.com/andres-erbsen/protobuf/gogoproto/gogo.proto"),
 		Package:    func(v string) *string { return &v }("gogoproto"),
 		Dependency: []string{"google/protobuf/descriptor.proto"},
 		Extension: []*google_protobuf.FieldDescriptorProto{{Name: func(v string) *string { return &v }("goproto_enum_prefix"),
@@ -1494,7 +1494,7 @@ func CasttypeDescription() (desc *google_protobuf.FileDescriptorSet) {
 		},
 	}, {Name: func(v string) *string { return &v }("combos/neither/casttype.proto"),
 		Package:    func(v string) *string { return &v }("casttype"),
-		Dependency: []string{"github.com/gogo/protobuf/gogoproto/gogo.proto"},
+		Dependency: []string{"github.com/andres-erbsen/protobuf/gogoproto/gogo.proto"},
 		MessageType: []*google_protobuf.DescriptorProto{{Name: func(v string) *string { return &v }("Castaway"),
 			Field: []*google_protobuf.FieldDescriptorProto{{Name: func(v string) *string { return &v }("Int32Ptr"),
 				Number: func(v int32) *int32 { return &v }(1),

@@ -1,7 +1,7 @@
 // Extensions for Protocol Buffers to create more go like structures.
 //
 // Copyright (c) 2015, Vastech SA (PTY) LTD.  rights reserved.
-// http://github.com/gogo/protobuf/gogoproto
+// http://github.com/andres-erbsen/protobuf/gogoproto
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -29,9 +29,9 @@
 package vanity
 
 import (
-	"github.com/gogo/protobuf/gogoproto"
-	"github.com/gogo/protobuf/proto"
-	descriptor "github.com/gogo/protobuf/protoc-gen-gogo/descriptor"
+	"github.com/andres-erbsen/protobuf/gogoproto"
+	"github.com/andres-erbsen/protobuf/proto"
+	descriptor "github.com/andres-erbsen/protobuf/protoc-gen-gogo/descriptor"
 )
 
 func MessageHasBoolExtension(msg *descriptor.DescriptorProto, extension *proto.ExtensionDesc) bool {

@@ -1,5 +1,5 @@
 // Copyright (c) 2013, Vastech SA (PTY) LTD. All rights reserved.
-// http://github.com/gogo/protobuf
+// http://github.com/andres-erbsen/protobuf
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -35,11 +35,11 @@ It is enabled by the following extensions:
 
 Let us look at:
 
-  github.com/gogo/protobuf/test/example/example.proto
+  github.com/andres-erbsen/protobuf/test/example/example.proto
 
 Btw all the output can be seen at:
 
-  github.com/gogo/protobuf/test/example/*
+  github.com/andres-erbsen/protobuf/test/example/*
 
 The following message:
 
@@ -47,7 +47,7 @@ The following message:
 
   message B {
 	optional A A = 1 [(gogoproto.nullable) = false, (gogoproto.embed) = true];
-	repeated bytes G = 2 [(gogoproto.customtype) = "github.com/gogo/protobuf/test/custom.Uint128", (gogoproto.nullable) = false];
+	repeated bytes G = 2 [(gogoproto.customtype) = "github.com/andres-erbsen/protobuf/test/custom.Uint128", (gogoproto.nullable) = false];
   }
 
 given to the populate plugin, will generate code the following code:
@@ -83,11 +83,11 @@ package populate
 
 import (
 	"fmt"
-	"github.com/gogo/protobuf/gogoproto"
-	"github.com/gogo/protobuf/proto"
-	descriptor "github.com/gogo/protobuf/protoc-gen-gogo/descriptor"
-	"github.com/gogo/protobuf/protoc-gen-gogo/generator"
-	"github.com/gogo/protobuf/vanity"
+	"github.com/andres-erbsen/protobuf/gogoproto"
+	"github.com/andres-erbsen/protobuf/proto"
+	descriptor "github.com/andres-erbsen/protobuf/protoc-gen-gogo/descriptor"
+	"github.com/andres-erbsen/protobuf/protoc-gen-gogo/generator"
+	"github.com/andres-erbsen/protobuf/vanity"
 	"math"
 	"strconv"
 	"strings"
@@ -462,7 +462,7 @@ func (p *plugin) Generate(file *generator.FileDescriptor) {
 	proto3 := gogoproto.IsProto3(file.FileDescriptorProto)
 
 	p.localName = generator.FileName(file)
-	protoPkg := p.NewImport("github.com/gogo/protobuf/proto")
+	protoPkg := p.NewImport("github.com/andres-erbsen/protobuf/proto")
 	if !gogoproto.ImportsGoGoProto(file.FileDescriptorProto) {
 		protoPkg = p.NewImport("github.com/golang/protobuf/proto")
 	}

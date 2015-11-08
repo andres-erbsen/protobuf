@@ -36,8 +36,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/gogo/protobuf/proto"
-	pb "github.com/gogo/protobuf/proto/testdata"
+	"github.com/andres-erbsen/protobuf/proto"
+	pb "github.com/andres-erbsen/protobuf/proto/testdata"
 )
 
 func TestGetExtensionsWithMissingExtensions(t *testing.T) {

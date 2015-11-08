@@ -17,25 +17,25 @@
 */
 package theproto3
 
-import proto "github.com/gogo/protobuf/proto"
+import proto "github.com/andres-erbsen/protobuf/proto"
 import fmt "fmt"
 import math "math"
 
-// discarding unused import gogoproto "github.com/gogo/protobuf/gogoproto"
-import test "github.com/gogo/protobuf/test/combos/both"
+// discarding unused import gogoproto "github.com/andres-erbsen/protobuf/gogoproto"
+import test "github.com/andres-erbsen/protobuf/test/combos/both"
 
-import google_protobuf "github.com/gogo/protobuf/protoc-gen-gogo/descriptor"
+import google_protobuf "github.com/andres-erbsen/protobuf/protoc-gen-gogo/descriptor"
 
 import strconv "strconv"
 
 import bytes "bytes"
 
-import github_com_gogo_protobuf_proto "github.com/gogo/protobuf/proto"
+import github_com_gogo_protobuf_proto "github.com/andres-erbsen/protobuf/proto"
 
 import strings "strings"
 import sort "sort"
 import reflect "reflect"
-import github_com_gogo_protobuf_sortkeys "github.com/gogo/protobuf/sortkeys"
+import github_com_gogo_protobuf_sortkeys "github.com/andres-erbsen/protobuf/sortkeys"
 
 import io "io"
 import unsafe "unsafe"
@@ -1131,7 +1131,7 @@ func Theproto3Description() (desc *google_protobuf.FileDescriptorSet) {
 			OptimizeFor:        func(v google_protobuf.FileOptions_OptimizeMode) *google_protobuf.FileOptions_OptimizeMode { return &v }(1),
 			XXX_extensions:     map[int32]proto.Extension{},
 		},
-	}, {Name: func(v string) *string { return &v }("github.com/gogo/protobuf/gogoproto/gogo.proto"),
+	}, {Name: func(v string) *string { return &v }("github.com/andres-erbsen/protobuf/gogoproto/gogo.proto"),
 		Package:    func(v string) *string { return &v }("gogoproto"),
 		Dependency: []string{"google/protobuf/descriptor.proto"},
 		Extension: []*google_protobuf.FieldDescriptorProto{{Name: func(v string) *string { return &v }("goproto_enum_prefix"),
@@ -1607,9 +1607,9 @@ func Theproto3Description() (desc *google_protobuf.FileDescriptorSet) {
 			JavaOuterClassname: func(v string) *string { return &v }("GoGoProtos"),
 			XXX_extensions:     map[int32]proto.Extension{},
 		},
-	}, {Name: func(v string) *string { return &v }("github.com/gogo/protobuf/test/combos/both/thetest.proto"),
+	}, {Name: func(v string) *string { return &v }("github.com/andres-erbsen/protobuf/test/combos/both/thetest.proto"),
 		Package:    func(v string) *string { return &v }("test"),
-		Dependency: []string{"github.com/gogo/protobuf/gogoproto/gogo.proto"},
+		Dependency: []string{"github.com/andres-erbsen/protobuf/gogoproto/gogo.proto"},
 		MessageType: []*google_protobuf.DescriptorProto{{Name: func(v string) *string { return &v }("NidOptNative"),
 			Field: []*google_protobuf.FieldDescriptorProto{{Name: func(v string) *string { return &v }("Field1"),
 				Number: func(v int32) *int32 { return &v }(1),
@@ -4528,7 +4528,7 @@ func Theproto3Description() (desc *google_protobuf.FileDescriptorSet) {
 		Options: &google_protobuf.FileOptions{XXX_extensions: map[int32]proto.Extension{63001: proto.NewExtension([]byte{0xc8, 0xe1, 0x1e, 0x0}), 63002: proto.NewExtension([]byte{0xd0, 0xe1, 0x1e, 0x0}), 63003: proto.NewExtension([]byte{0xd8, 0xe1, 0x1e, 0x0}), 63004: proto.NewExtension([]byte{0xe0, 0xe1, 0x1e, 0x1}), 63005: proto.NewExtension([]byte{0xe8, 0xe1, 0x1e, 0x1}), 63006: proto.NewExtension([]byte{0xf0, 0xe1, 0x1e, 0x1}), 63007: proto.NewExtension([]byte{0xf8, 0xe1, 0x1e, 0x1}), 63008: proto.NewExtension([]byte{0x80, 0xe2, 0x1e, 0x1}), 63013: proto.NewExtension([]byte{0xa8, 0xe2, 0x1e, 0x1}), 63014: proto.NewExtension([]byte{0xb0, 0xe2, 0x1e, 0x1}), 63015: proto.NewExtension([]byte{0xb8, 0xe2, 0x1e, 0x1}), 63016: proto.NewExtension([]byte{0xc0, 0xe2, 0x1e, 0x1}), 63017: proto.NewExtension([]byte{0xc8, 0xe2, 0x1e, 0x1}), 63018: proto.NewExtension([]byte{0xd0, 0xe2, 0x1e, 0x1}), 63020: proto.NewExtension([]byte{0xe0, 0xe2, 0x1e, 0x1}), 63021: proto.NewExtension([]byte{0xe8, 0xe2, 0x1e, 0x0}), 63022: proto.NewExtension([]byte{0xf0, 0xe2, 0x1e, 0x1}), 63023: proto.NewExtension([]byte{0xf8, 0xe2, 0x1e, 0x0}), 63024: proto.NewExtension([]byte{0x80, 0xe3, 0x1e, 0x0})}},
 	}, {Name: func(v string) *string { return &v }("combos/unsafeunmarshaler/theproto3.proto"),
 		Package:    func(v string) *string { return &v }("theproto3"),
-		Dependency: []string{"github.com/gogo/protobuf/gogoproto/gogo.proto", "github.com/gogo/protobuf/test/combos/both/thetest.proto"},
+		Dependency: []string{"github.com/andres-erbsen/protobuf/gogoproto/gogo.proto", "github.com/andres-erbsen/protobuf/test/combos/both/thetest.proto"},
 		MessageType: []*google_protobuf.DescriptorProto{{Name: func(v string) *string { return &v }("Message"),
 			Field: []*google_protobuf.FieldDescriptorProto{{Name: func(v string) *string { return &v }("name"),
 				Number: func(v int32) *int32 { return &v }(1),

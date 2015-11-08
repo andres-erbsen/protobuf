@@ -16,21 +16,21 @@
 */
 package one
 
-import proto "github.com/gogo/protobuf/proto"
+import proto "github.com/andres-erbsen/protobuf/proto"
 import fmt "fmt"
 import math "math"
 
-// discarding unused import gogoproto "github.com/gogo/protobuf/gogoproto"
+// discarding unused import gogoproto "github.com/andres-erbsen/protobuf/gogoproto"
 
-import github_com_gogo_protobuf_test_custom "github.com/gogo/protobuf/test/custom"
-import github_com_gogo_protobuf_test_casttype "github.com/gogo/protobuf/test/casttype"
+import github_com_gogo_protobuf_test_custom "github.com/andres-erbsen/protobuf/test/custom"
+import github_com_gogo_protobuf_test_casttype "github.com/andres-erbsen/protobuf/test/casttype"
 
-import google_protobuf "github.com/gogo/protobuf/protoc-gen-gogo/descriptor"
+import google_protobuf "github.com/andres-erbsen/protobuf/protoc-gen-gogo/descriptor"
 
 import bytes "bytes"
 
 import strings "strings"
-import github_com_gogo_protobuf_proto "github.com/gogo/protobuf/proto"
+import github_com_gogo_protobuf_proto "github.com/andres-erbsen/protobuf/proto"
 import sort "sort"
 import strconv "strconv"
 import reflect "reflect"
@@ -714,10 +714,10 @@ type CustomOneof_Stringy struct {
 	Stringy string `protobuf:"bytes,34,opt,name=Stringy,oneof"`
 }
 type CustomOneof_CustomType struct {
-	CustomType github_com_gogo_protobuf_test_custom.Uint128 `protobuf:"bytes,35,opt,name=CustomType,oneof,customtype=github.com/gogo/protobuf/test/custom.Uint128"`
+	CustomType github_com_gogo_protobuf_test_custom.Uint128 `protobuf:"bytes,35,opt,name=CustomType,oneof,customtype=github.com/andres-erbsen/protobuf/test/custom.Uint128"`
 }
 type CustomOneof_CastType struct {
-	CastType github_com_gogo_protobuf_test_casttype.MyUint64Type `protobuf:"varint,36,opt,name=CastType,oneof,casttype=github.com/gogo/protobuf/test/casttype.MyUint64Type"`
+	CastType github_com_gogo_protobuf_test_casttype.MyUint64Type `protobuf:"varint,36,opt,name=CastType,oneof,casttype=github.com/andres-erbsen/protobuf/test/casttype.MyUint64Type"`
 }
 type CustomOneof_MyCustomName struct {
 	MyCustomName int64 `protobuf:"varint,37,opt,name=CustomName,oneof"`
@@ -1809,7 +1809,7 @@ func OneDescription() (desc *google_protobuf.FileDescriptorSet) {
 			OptimizeFor:        func(v google_protobuf.FileOptions_OptimizeMode) *google_protobuf.FileOptions_OptimizeMode { return &v }(1),
 			XXX_extensions:     map[int32]proto.Extension{},
 		},
-	}, {Name: func(v string) *string { return &v }("github.com/gogo/protobuf/gogoproto/gogo.proto"),
+	}, {Name: func(v string) *string { return &v }("github.com/andres-erbsen/protobuf/gogoproto/gogo.proto"),
 		Package:    func(v string) *string { return &v }("gogoproto"),
 		Dependency: []string{"google/protobuf/descriptor.proto"},
 		Extension: []*google_protobuf.FieldDescriptorProto{{Name: func(v string) *string { return &v }("goproto_enum_prefix"),
@@ -2287,7 +2287,7 @@ func OneDescription() (desc *google_protobuf.FileDescriptorSet) {
 		},
 	}, {Name: func(v string) *string { return &v }("combos/both/one.proto"),
 		Package:    func(v string) *string { return &v }("one"),
-		Dependency: []string{"github.com/gogo/protobuf/gogoproto/gogo.proto"},
+		Dependency: []string{"github.com/andres-erbsen/protobuf/gogoproto/gogo.proto"},
 		MessageType: []*google_protobuf.DescriptorProto{{Name: func(v string) *string { return &v }("Subby"),
 			Field: []*google_protobuf.FieldDescriptorProto{{Name: func(v string) *string { return &v }("sub"),
 				Number: func(v int32) *int32 { return &v }(1),

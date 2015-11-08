@@ -94,7 +94,7 @@ The resulting file, test.pb.go, is:
 
 	package example
 
-	import proto "github.com/gogo/protobuf/proto"
+	import proto "github.com/andres-erbsen/protobuf/proto"
 	import math "math"
 
 	type FOO int32
@@ -221,7 +221,7 @@ package main
 	import (
 		"log"
 
-		"github.com/gogo/protobuf/proto"
+		"github.com/andres-erbsen/protobuf/proto"
 		pb "./example.pb"
 	)
 

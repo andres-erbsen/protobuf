@@ -39,11 +39,8 @@ install:
 	go install ./protoc-gen-gogofast
 	go install ./protoc-gen-gogofaster
 	go install ./protoc-gen-gogoslick
-	go install ./fieldpath/fieldpath-gen
-	go install ./fieldpath
-	go install ./pbpath
-	go install ./protoc-gen-gogo/version/protoc-min-version
-	go install ./protoc-gen-gogo/protoc-gen-combo
+	go install ./protoc-min-version
+	go install ./protoc-gen-combo
 
 clean:
 	go clean ./...
@@ -58,7 +55,6 @@ regenerate:
 	make -C protoc-gen-gogo/descriptor regenerate
 	make -C protoc-gen-gogo/plugin regenerate
 	make -C gogoproto regenerate
-	make -C fieldpath/fieldpath-gen regenerate
 	make -C proto/testdata regenerate
 	make -C jsonpb/jsonpb_test_proto regenerate
 	make -C test regenerate
@@ -74,6 +70,7 @@ regenerate:
 	make -C test/packed regenerate
 	make -C test/tags regenerate
 	make -C test/oneof regenerate
+	make -C test/oneof3 regenerate
 	make -C test/theproto3 regenerate
 	make -C test/mapsproto2 regenerate
 	make -C test/issue42order regenerate
@@ -87,6 +84,7 @@ regenerate:
 	make -C test/issue34 regenerate
 	make -C test/empty-issue70 regenerate
 	make -C test/indeximport-issue72 regenerate
+	make -C test/fuzztests regenerate
 	make gofmt
 
 tests:
@@ -95,10 +93,7 @@ tests:
 
 vet:
 	go vet ./...
-
-# See https://github.com/golang/go/issues/11843
-vetshadow:
-	! go tool vet --shadow . 2>&1 | grep -vE 'declaration of err shadows declaration at (proto/text.go:535|proto/text.go:570|protoc-gen-gogo/main.go:84)'
+	go tool vet --shadow .
 
 errcheck:
 	go get -u github.com/kisielk/errcheck

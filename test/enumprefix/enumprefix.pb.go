@@ -14,6 +14,7 @@
 package enumprefix
 
 import proto "github.com/andres-erbsen/protobuf/proto"
+import fmt "fmt"
 import math "math"
 import test "github.com/andres-erbsen/protobuf/test"
 
@@ -21,10 +22,11 @@ import test "github.com/andres-erbsen/protobuf/test"
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
+var _ = fmt.Errorf
 var _ = math.Inf
 
 type MyMessage struct {
-	TheField         test.TheTestEnum `protobuf:"varint,1,opt,enum=test.TheTestEnum" json:"TheField"`
+	TheField         test.TheTestEnum `protobuf:"varint,1,opt,name=TheField,enum=test.TheTestEnum" json:"TheField"`
 	XXX_unrecognized []byte           `json:"-"`
 }
 

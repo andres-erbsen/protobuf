@@ -12,13 +12,22 @@ It is generated from these files:
 It has these top-level messages:
 	Simple3
 	Mappy
+	Simple
+	Repeats
+	Widget
+	Maps
+	MsgWithOneof
 */
 package jsonpb
 
 import proto "github.com/andres-erbsen/protobuf/proto"
+import fmt "fmt"
+import math "math"
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
+var _ = fmt.Errorf
+var _ = math.Inf
 
 type Simple3 struct {
 	Dub float64 `protobuf:"fixed64,1,opt,name=dub,proto3" json:"dub,omitempty"`

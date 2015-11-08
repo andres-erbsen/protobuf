@@ -46,6 +46,7 @@ import (
 	_ "github.com/andres-erbsen/protobuf/plugin/face"
 	_ "github.com/andres-erbsen/protobuf/plugin/gostring"
 	_ "github.com/andres-erbsen/protobuf/plugin/marshalto"
+	_ "github.com/andres-erbsen/protobuf/plugin/oneofcheck"
 	_ "github.com/andres-erbsen/protobuf/plugin/populate"
 	_ "github.com/andres-erbsen/protobuf/plugin/size"
 	_ "github.com/andres-erbsen/protobuf/plugin/stringer"

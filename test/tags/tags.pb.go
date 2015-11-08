@@ -15,17 +15,19 @@ It has these top-level messages:
 package tags
 
 import proto "github.com/andres-erbsen/protobuf/proto"
+import fmt "fmt"
 import math "math"
 
 // discarding unused import gogoproto "github.com/andres-erbsen/protobuf/gogoproto"
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
+var _ = fmt.Errorf
 var _ = math.Inf
 
 type Outside struct {
-	*Inside          `protobuf:"bytes,1,opt,embedded=Inside" json:""`
-	Field2           *string `protobuf:"bytes,2,opt" json:"MyField2" xml:",comment"`
+	*Inside          `protobuf:"bytes,1,opt,name=Inside,embedded=Inside" json:""`
+	Field2           *string `protobuf:"bytes,2,opt,name=Field2" json:"MyField2" xml:",comment"`
 	XXX_unrecognized []byte  `json:"-"`
 }
 
@@ -41,7 +43,7 @@ func (m *Outside) GetField2() string {
 }
 
 type Inside struct {
-	Field1           *string `protobuf:"bytes,1,opt" json:"MyField1" xml:",chardata"`
+	Field1           *string `protobuf:"bytes,1,opt,name=Field1" json:"MyField1" xml:",chardata"`
 	XXX_unrecognized []byte  `json:"-"`
 }
 

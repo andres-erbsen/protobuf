@@ -17,16 +17,18 @@
 package required
 
 import proto "github.com/andres-erbsen/protobuf/proto"
+import fmt "fmt"
 import math "math"
 
 // discarding unused import gogoproto "github.com/andres-erbsen/protobuf/gogoproto"
 
-import io "io"
-import fmt "fmt"
 import github_com_gogo_protobuf_proto "github.com/andres-erbsen/protobuf/proto"
+
+import io "io"
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
+var _ = fmt.Errorf
 var _ = math.Inf
 
 type RequiredExample struct {
@@ -62,21 +64,21 @@ func (m *RequiredExample) GetTheRepeatedStrings() []string {
 }
 
 type NidOptNative struct {
-	Field1           float64 `protobuf:"fixed64,1,req" json:"Field1"`
-	Field2           float32 `protobuf:"fixed32,2,req" json:"Field2"`
-	Field3           int32   `protobuf:"varint,3,req" json:"Field3"`
-	Field4           int64   `protobuf:"varint,4,req" json:"Field4"`
-	Field5           uint32  `protobuf:"varint,5,req" json:"Field5"`
-	Field6           uint64  `protobuf:"varint,6,req" json:"Field6"`
-	Field7           int32   `protobuf:"zigzag32,7,req" json:"Field7"`
-	Field8           int64   `protobuf:"zigzag64,8,req" json:"Field8"`
-	Field9           uint32  `protobuf:"fixed32,9,req" json:"Field9"`
-	Field10          int32   `protobuf:"fixed32,10,req" json:"Field10"`
-	Field11          uint64  `protobuf:"fixed64,11,req" json:"Field11"`
-	Field12          int64   `protobuf:"fixed64,12,req" json:"Field12"`
-	Field13          bool    `protobuf:"varint,13,req" json:"Field13"`
-	Field14          string  `protobuf:"bytes,14,req" json:"Field14"`
-	Field15          []byte  `protobuf:"bytes,15,req" json:"Field15"`
+	Field1           float64 `protobuf:"fixed64,1,req,name=Field1" json:"Field1"`
+	Field2           float32 `protobuf:"fixed32,2,req,name=Field2" json:"Field2"`
+	Field3           int32   `protobuf:"varint,3,req,name=Field3" json:"Field3"`
+	Field4           int64   `protobuf:"varint,4,req,name=Field4" json:"Field4"`
+	Field5           uint32  `protobuf:"varint,5,req,name=Field5" json:"Field5"`
+	Field6           uint64  `protobuf:"varint,6,req,name=Field6" json:"Field6"`
+	Field7           int32   `protobuf:"zigzag32,7,req,name=Field7" json:"Field7"`
+	Field8           int64   `protobuf:"zigzag64,8,req,name=Field8" json:"Field8"`
+	Field9           uint32  `protobuf:"fixed32,9,req,name=Field9" json:"Field9"`
+	Field10          int32   `protobuf:"fixed32,10,req,name=Field10" json:"Field10"`
+	Field11          uint64  `protobuf:"fixed64,11,req,name=Field11" json:"Field11"`
+	Field12          int64   `protobuf:"fixed64,12,req,name=Field12" json:"Field12"`
+	Field13          bool    `protobuf:"varint,13,req,name=Field13" json:"Field13"`
+	Field14          string  `protobuf:"bytes,14,req,name=Field14" json:"Field14"`
+	Field15          []byte  `protobuf:"bytes,15,req,name=Field15" json:"Field15"`
 	XXX_unrecognized []byte  `json:"-"`
 }
 
@@ -190,21 +192,21 @@ func (m *NidOptNative) GetField15() []byte {
 }
 
 type NinOptNative struct {
-	Field1           *float64 `protobuf:"fixed64,1,req" json:"Field1,omitempty"`
-	Field2           *float32 `protobuf:"fixed32,2,req" json:"Field2,omitempty"`
-	Field3           *int32   `protobuf:"varint,3,req" json:"Field3,omitempty"`
-	Field4           *int64   `protobuf:"varint,4,req" json:"Field4,omitempty"`
-	Field5           *uint32  `protobuf:"varint,5,req" json:"Field5,omitempty"`
-	Field6           *uint64  `protobuf:"varint,6,req" json:"Field6,omitempty"`
-	Field7           *int32   `protobuf:"zigzag32,7,req" json:"Field7,omitempty"`
-	Field8           *int64   `protobuf:"zigzag64,8,req" json:"Field8,omitempty"`
-	Field9           *uint32  `protobuf:"fixed32,9,req" json:"Field9,omitempty"`
-	Field10          *int32   `protobuf:"fixed32,10,req" json:"Field10,omitempty"`
-	Field11          *uint64  `protobuf:"fixed64,11,req" json:"Field11,omitempty"`
-	Field12          *int64   `protobuf:"fixed64,12,req" json:"Field12,omitempty"`
-	Field13          *bool    `protobuf:"varint,13,req" json:"Field13,omitempty"`
-	Field14          *string  `protobuf:"bytes,14,req" json:"Field14,omitempty"`
-	Field15          []byte   `protobuf:"bytes,15,req" json:"Field15,omitempty"`
+	Field1           *float64 `protobuf:"fixed64,1,req,name=Field1" json:"Field1,omitempty"`
+	Field2           *float32 `protobuf:"fixed32,2,req,name=Field2" json:"Field2,omitempty"`
+	Field3           *int32   `protobuf:"varint,3,req,name=Field3" json:"Field3,omitempty"`
+	Field4           *int64   `protobuf:"varint,4,req,name=Field4" json:"Field4,omitempty"`
+	Field5           *uint32  `protobuf:"varint,5,req,name=Field5" json:"Field5,omitempty"`
+	Field6           *uint64  `protobuf:"varint,6,req,name=Field6" json:"Field6,omitempty"`
+	Field7           *int32   `protobuf:"zigzag32,7,req,name=Field7" json:"Field7,omitempty"`
+	Field8           *int64   `protobuf:"zigzag64,8,req,name=Field8" json:"Field8,omitempty"`
+	Field9           *uint32  `protobuf:"fixed32,9,req,name=Field9" json:"Field9,omitempty"`
+	Field10          *int32   `protobuf:"fixed32,10,req,name=Field10" json:"Field10,omitempty"`
+	Field11          *uint64  `protobuf:"fixed64,11,req,name=Field11" json:"Field11,omitempty"`
+	Field12          *int64   `protobuf:"fixed64,12,req,name=Field12" json:"Field12,omitempty"`
+	Field13          *bool    `protobuf:"varint,13,req,name=Field13" json:"Field13,omitempty"`
+	Field14          *string  `protobuf:"bytes,14,req,name=Field14" json:"Field14,omitempty"`
+	Field15          []byte   `protobuf:"bytes,15,req,name=Field15" json:"Field15,omitempty"`
 	XXX_unrecognized []byte   `json:"-"`
 }
 
@@ -318,7 +320,7 @@ func (m *NinOptNative) GetField15() []byte {
 }
 
 type NestedNinOptNative struct {
-	NestedNinOpts    []*NinOptNative `protobuf:"bytes,1,rep" json:"NestedNinOpts,omitempty"`
+	NestedNinOpts    []*NinOptNative `protobuf:"bytes,1,rep,name=NestedNinOpts" json:"NestedNinOpts,omitempty"`
 	XXX_unrecognized []byte          `json:"-"`
 }
 
@@ -333,1389 +335,6 @@ func (m *NestedNinOptNative) GetNestedNinOpts() []*NinOptNative {
 	return nil
 }
 
-func (m *RequiredExample) Unmarshal(data []byte) error {
-	var hasFields [1]uint64
-	l := len(data)
-	iNdEx := 0
-	for iNdEx < l {
-		var wire uint64
-		for shift := uint(0); ; shift += 7 {
-			if iNdEx >= l {
-				return io.ErrUnexpectedEOF
-			}
-			b := data[iNdEx]
-			iNdEx++
-			wire |= (uint64(b) & 0x7F) << shift
-			if b < 0x80 {
-				break
-			}
-		}
-		fieldNum := int32(wire >> 3)
-		wireType := int(wire & 0x7)
-		switch fieldNum {
-		case 1:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field TheRequiredString", wireType)
-			}
-			var stringLen uint64
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				stringLen |= (uint64(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			postIndex := iNdEx + int(stringLen)
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			s := string(data[iNdEx:postIndex])
-			m.TheRequiredString = &s
-			iNdEx = postIndex
-			hasFields[0] |= uint64(0x00000001)
-		case 2:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field TheOptionalString", wireType)
-			}
-			var stringLen uint64
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				stringLen |= (uint64(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			postIndex := iNdEx + int(stringLen)
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			s := string(data[iNdEx:postIndex])
-			m.TheOptionalString = &s
-			iNdEx = postIndex
-		case 3:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field TheRepeatedStrings", wireType)
-			}
-			var stringLen uint64
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				stringLen |= (uint64(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			postIndex := iNdEx + int(stringLen)
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.TheRepeatedStrings = append(m.TheRepeatedStrings, string(data[iNdEx:postIndex]))
-			iNdEx = postIndex
-		default:
-			var sizeOfWire int
-			for {
-				sizeOfWire++
-				wire >>= 7
-				if wire == 0 {
-					break
-				}
-			}
-			iNdEx -= sizeOfWire
-			skippy, err := skipRequiredexample(data[iNdEx:])
-			if err != nil {
-				return err
-			}
-			if skippy < 0 {
-				return ErrInvalidLengthRequiredexample
-			}
-			if (iNdEx + skippy) > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.XXX_unrecognized = append(m.XXX_unrecognized, data[iNdEx:iNdEx+skippy]...)
-			iNdEx += skippy
-		}
-	}
-	if hasFields[0]&uint64(0x00000001) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("theRequiredString")
-	}
-
-	return nil
-}
-func (m *NidOptNative) Unmarshal(data []byte) error {
-	var hasFields [1]uint64
-	l := len(data)
-	iNdEx := 0
-	for iNdEx < l {
-		var wire uint64
-		for shift := uint(0); ; shift += 7 {
-			if iNdEx >= l {
-				return io.ErrUnexpectedEOF
-			}
-			b := data[iNdEx]
-			iNdEx++
-			wire |= (uint64(b) & 0x7F) << shift
-			if b < 0x80 {
-				break
-			}
-		}
-		fieldNum := int32(wire >> 3)
-		wireType := int(wire & 0x7)
-		switch fieldNum {
-		case 1:
-			if wireType != 1 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field1", wireType)
-			}
-			var v uint64
-			if (iNdEx + 8) > l {
-				return io.ErrUnexpectedEOF
-			}
-			iNdEx += 8
-			v = uint64(data[iNdEx-8])
-			v |= uint64(data[iNdEx-7]) << 8
-			v |= uint64(data[iNdEx-6]) << 16
-			v |= uint64(data[iNdEx-5]) << 24
-			v |= uint64(data[iNdEx-4]) << 32
-			v |= uint64(data[iNdEx-3]) << 40
-			v |= uint64(data[iNdEx-2]) << 48
-			v |= uint64(data[iNdEx-1]) << 56
-			m.Field1 = float64(math.Float64frombits(v))
-			hasFields[0] |= uint64(0x00000001)
-		case 2:
-			if wireType != 5 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field2", wireType)
-			}
-			var v uint32
-			if (iNdEx + 4) > l {
-				return io.ErrUnexpectedEOF
-			}
-			iNdEx += 4
-			v = uint32(data[iNdEx-4])
-			v |= uint32(data[iNdEx-3]) << 8
-			v |= uint32(data[iNdEx-2]) << 16
-			v |= uint32(data[iNdEx-1]) << 24
-			m.Field2 = float32(math.Float32frombits(v))
-			hasFields[0] |= uint64(0x00000002)
-		case 3:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field3", wireType)
-			}
-			m.Field3 = 0
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				m.Field3 |= (int32(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			hasFields[0] |= uint64(0x00000004)
-		case 4:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field4", wireType)
-			}
-			m.Field4 = 0
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				m.Field4 |= (int64(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			hasFields[0] |= uint64(0x00000008)
-		case 5:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field5", wireType)
-			}
-			m.Field5 = 0
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				m.Field5 |= (uint32(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			hasFields[0] |= uint64(0x00000010)
-		case 6:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field6", wireType)
-			}
-			m.Field6 = 0
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				m.Field6 |= (uint64(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			hasFields[0] |= uint64(0x00000020)
-		case 7:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field7", wireType)
-			}
-			var v int32
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				v |= (int32(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			v = int32((uint32(v) >> 1) ^ uint32(((v&1)<<31)>>31))
-			m.Field7 = v
-			hasFields[0] |= uint64(0x00000040)
-		case 8:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field8", wireType)
-			}
-			var v uint64
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				v |= (uint64(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			v = (v >> 1) ^ uint64((int64(v&1)<<63)>>63)
-			m.Field8 = int64(v)
-			hasFields[0] |= uint64(0x00000080)
-		case 9:
-			if wireType != 5 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field9", wireType)
-			}
-			m.Field9 = 0
-			if (iNdEx + 4) > l {
-				return io.ErrUnexpectedEOF
-			}
-			iNdEx += 4
-			m.Field9 = uint32(data[iNdEx-4])
-			m.Field9 |= uint32(data[iNdEx-3]) << 8
-			m.Field9 |= uint32(data[iNdEx-2]) << 16
-			m.Field9 |= uint32(data[iNdEx-1]) << 24
-			hasFields[0] |= uint64(0x00000100)
-		case 10:
-			if wireType != 5 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field10", wireType)
-			}
-			m.Field10 = 0
-			if (iNdEx + 4) > l {
-				return io.ErrUnexpectedEOF
-			}
-			iNdEx += 4
-			m.Field10 = int32(data[iNdEx-4])
-			m.Field10 |= int32(data[iNdEx-3]) << 8
-			m.Field10 |= int32(data[iNdEx-2]) << 16
-			m.Field10 |= int32(data[iNdEx-1]) << 24
-			hasFields[0] |= uint64(0x00000200)
-		case 11:
-			if wireType != 1 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field11", wireType)
-			}
-			m.Field11 = 0
-			if (iNdEx + 8) > l {
-				return io.ErrUnexpectedEOF
-			}
-			iNdEx += 8
-			m.Field11 = uint64(data[iNdEx-8])
-			m.Field11 |= uint64(data[iNdEx-7]) << 8
-			m.Field11 |= uint64(data[iNdEx-6]) << 16
-			m.Field11 |= uint64(data[iNdEx-5]) << 24
-			m.Field11 |= uint64(data[iNdEx-4]) << 32
-			m.Field11 |= uint64(data[iNdEx-3]) << 40
-			m.Field11 |= uint64(data[iNdEx-2]) << 48
-			m.Field11 |= uint64(data[iNdEx-1]) << 56
-			hasFields[0] |= uint64(0x00000400)
-		case 12:
-			if wireType != 1 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field12", wireType)
-			}
-			m.Field12 = 0
-			if (iNdEx + 8) > l {
-				return io.ErrUnexpectedEOF
-			}
-			iNdEx += 8
-			m.Field12 = int64(data[iNdEx-8])
-			m.Field12 |= int64(data[iNdEx-7]) << 8
-			m.Field12 |= int64(data[iNdEx-6]) << 16
-			m.Field12 |= int64(data[iNdEx-5]) << 24
-			m.Field12 |= int64(data[iNdEx-4]) << 32
-			m.Field12 |= int64(data[iNdEx-3]) << 40
-			m.Field12 |= int64(data[iNdEx-2]) << 48
-			m.Field12 |= int64(data[iNdEx-1]) << 56
-			hasFields[0] |= uint64(0x00000800)
-		case 13:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field13", wireType)
-			}
-			var v int
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				v |= (int(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			m.Field13 = bool(v != 0)
-			hasFields[0] |= uint64(0x00001000)
-		case 14:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field14", wireType)
-			}
-			var stringLen uint64
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				stringLen |= (uint64(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			postIndex := iNdEx + int(stringLen)
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.Field14 = string(data[iNdEx:postIndex])
-			iNdEx = postIndex
-			hasFields[0] |= uint64(0x00002000)
-		case 15:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field15", wireType)
-			}
-			var byteLen int
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				byteLen |= (int(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if byteLen < 0 {
-				return ErrInvalidLengthRequiredexample
-			}
-			postIndex := iNdEx + byteLen
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.Field15 = append([]byte{}, data[iNdEx:postIndex]...)
-			iNdEx = postIndex
-			hasFields[0] |= uint64(0x00004000)
-		default:
-			var sizeOfWire int
-			for {
-				sizeOfWire++
-				wire >>= 7
-				if wire == 0 {
-					break
-				}
-			}
-			iNdEx -= sizeOfWire
-			skippy, err := skipRequiredexample(data[iNdEx:])
-			if err != nil {
-				return err
-			}
-			if skippy < 0 {
-				return ErrInvalidLengthRequiredexample
-			}
-			if (iNdEx + skippy) > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.XXX_unrecognized = append(m.XXX_unrecognized, data[iNdEx:iNdEx+skippy]...)
-			iNdEx += skippy
-		}
-	}
-	if hasFields[0]&uint64(0x00000001) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field1")
-	}
-	if hasFields[0]&uint64(0x00000002) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field2")
-	}
-	if hasFields[0]&uint64(0x00000004) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field3")
-	}
-	if hasFields[0]&uint64(0x00000008) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field4")
-	}
-	if hasFields[0]&uint64(0x00000010) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field5")
-	}
-	if hasFields[0]&uint64(0x00000020) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field6")
-	}
-	if hasFields[0]&uint64(0x00000040) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field7")
-	}
-	if hasFields[0]&uint64(0x00000080) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field8")
-	}
-	if hasFields[0]&uint64(0x00000100) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field9")
-	}
-	if hasFields[0]&uint64(0x00000200) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field10")
-	}
-	if hasFields[0]&uint64(0x00000400) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field11")
-	}
-	if hasFields[0]&uint64(0x00000800) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field12")
-	}
-	if hasFields[0]&uint64(0x00001000) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field13")
-	}
-	if hasFields[0]&uint64(0x00002000) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field14")
-	}
-	if hasFields[0]&uint64(0x00004000) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field15")
-	}
-
-	return nil
-}
-func (m *NinOptNative) Unmarshal(data []byte) error {
-	var hasFields [1]uint64
-	l := len(data)
-	iNdEx := 0
-	for iNdEx < l {
-		var wire uint64
-		for shift := uint(0); ; shift += 7 {
-			if iNdEx >= l {
-				return io.ErrUnexpectedEOF
-			}
-			b := data[iNdEx]
-			iNdEx++
-			wire |= (uint64(b) & 0x7F) << shift
-			if b < 0x80 {
-				break
-			}
-		}
-		fieldNum := int32(wire >> 3)
-		wireType := int(wire & 0x7)
-		switch fieldNum {
-		case 1:
-			if wireType != 1 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field1", wireType)
-			}
-			var v uint64
-			if (iNdEx + 8) > l {
-				return io.ErrUnexpectedEOF
-			}
-			iNdEx += 8
-			v = uint64(data[iNdEx-8])
-			v |= uint64(data[iNdEx-7]) << 8
-			v |= uint64(data[iNdEx-6]) << 16
-			v |= uint64(data[iNdEx-5]) << 24
-			v |= uint64(data[iNdEx-4]) << 32
-			v |= uint64(data[iNdEx-3]) << 40
-			v |= uint64(data[iNdEx-2]) << 48
-			v |= uint64(data[iNdEx-1]) << 56
-			v2 := float64(math.Float64frombits(v))
-			m.Field1 = &v2
-			hasFields[0] |= uint64(0x00000001)
-		case 2:
-			if wireType != 5 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field2", wireType)
-			}
-			var v uint32
-			if (iNdEx + 4) > l {
-				return io.ErrUnexpectedEOF
-			}
-			iNdEx += 4
-			v = uint32(data[iNdEx-4])
-			v |= uint32(data[iNdEx-3]) << 8
-			v |= uint32(data[iNdEx-2]) << 16
-			v |= uint32(data[iNdEx-1]) << 24
-			v2 := float32(math.Float32frombits(v))
-			m.Field2 = &v2
-			hasFields[0] |= uint64(0x00000002)
-		case 3:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field3", wireType)
-			}
-			var v int32
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				v |= (int32(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			m.Field3 = &v
-			hasFields[0] |= uint64(0x00000004)
-		case 4:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field4", wireType)
-			}
-			var v int64
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				v |= (int64(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			m.Field4 = &v
-			hasFields[0] |= uint64(0x00000008)
-		case 5:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field5", wireType)
-			}
-			var v uint32
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				v |= (uint32(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			m.Field5 = &v
-			hasFields[0] |= uint64(0x00000010)
-		case 6:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field6", wireType)
-			}
-			var v uint64
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				v |= (uint64(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			m.Field6 = &v
-			hasFields[0] |= uint64(0x00000020)
-		case 7:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field7", wireType)
-			}
-			var v int32
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				v |= (int32(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			v = int32((uint32(v) >> 1) ^ uint32(((v&1)<<31)>>31))
-			m.Field7 = &v
-			hasFields[0] |= uint64(0x00000040)
-		case 8:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field8", wireType)
-			}
-			var v uint64
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				v |= (uint64(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			v = (v >> 1) ^ uint64((int64(v&1)<<63)>>63)
-			v2 := int64(v)
-			m.Field8 = &v2
-			hasFields[0] |= uint64(0x00000080)
-		case 9:
-			if wireType != 5 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field9", wireType)
-			}
-			var v uint32
-			if (iNdEx + 4) > l {
-				return io.ErrUnexpectedEOF
-			}
-			iNdEx += 4
-			v = uint32(data[iNdEx-4])
-			v |= uint32(data[iNdEx-3]) << 8
-			v |= uint32(data[iNdEx-2]) << 16
-			v |= uint32(data[iNdEx-1]) << 24
-			m.Field9 = &v
-			hasFields[0] |= uint64(0x00000100)
-		case 10:
-			if wireType != 5 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field10", wireType)
-			}
-			var v int32
-			if (iNdEx + 4) > l {
-				return io.ErrUnexpectedEOF
-			}
-			iNdEx += 4
-			v = int32(data[iNdEx-4])
-			v |= int32(data[iNdEx-3]) << 8
-			v |= int32(data[iNdEx-2]) << 16
-			v |= int32(data[iNdEx-1]) << 24
-			m.Field10 = &v
-			hasFields[0] |= uint64(0x00000200)
-		case 11:
-			if wireType != 1 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field11", wireType)
-			}
-			var v uint64
-			if (iNdEx + 8) > l {
-				return io.ErrUnexpectedEOF
-			}
-			iNdEx += 8
-			v = uint64(data[iNdEx-8])
-			v |= uint64(data[iNdEx-7]) << 8
-			v |= uint64(data[iNdEx-6]) << 16
-			v |= uint64(data[iNdEx-5]) << 24
-			v |= uint64(data[iNdEx-4]) << 32
-			v |= uint64(data[iNdEx-3]) << 40
-			v |= uint64(data[iNdEx-2]) << 48
-			v |= uint64(data[iNdEx-1]) << 56
-			m.Field11 = &v
-			hasFields[0] |= uint64(0x00000400)
-		case 12:
-			if wireType != 1 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field12", wireType)
-			}
-			var v int64
-			if (iNdEx + 8) > l {
-				return io.ErrUnexpectedEOF
-			}
-			iNdEx += 8
-			v = int64(data[iNdEx-8])
-			v |= int64(data[iNdEx-7]) << 8
-			v |= int64(data[iNdEx-6]) << 16
-			v |= int64(data[iNdEx-5]) << 24
-			v |= int64(data[iNdEx-4]) << 32
-			v |= int64(data[iNdEx-3]) << 40
-			v |= int64(data[iNdEx-2]) << 48
-			v |= int64(data[iNdEx-1]) << 56
-			m.Field12 = &v
-			hasFields[0] |= uint64(0x00000800)
-		case 13:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field13", wireType)
-			}
-			var v int
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				v |= (int(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			b := bool(v != 0)
-			m.Field13 = &b
-			hasFields[0] |= uint64(0x00001000)
-		case 14:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field14", wireType)
-			}
-			var stringLen uint64
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				stringLen |= (uint64(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			postIndex := iNdEx + int(stringLen)
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			s := string(data[iNdEx:postIndex])
-			m.Field14 = &s
-			iNdEx = postIndex
-			hasFields[0] |= uint64(0x00002000)
-		case 15:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Field15", wireType)
-			}
-			var byteLen int
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				byteLen |= (int(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			if byteLen < 0 {
-				return ErrInvalidLengthRequiredexample
-			}
-			postIndex := iNdEx + byteLen
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.Field15 = append([]byte{}, data[iNdEx:postIndex]...)
-			iNdEx = postIndex
-			hasFields[0] |= uint64(0x00004000)
-		default:
-			var sizeOfWire int
-			for {
-				sizeOfWire++
-				wire >>= 7
-				if wire == 0 {
-					break
-				}
-			}
-			iNdEx -= sizeOfWire
-			skippy, err := skipRequiredexample(data[iNdEx:])
-			if err != nil {
-				return err
-			}
-			if skippy < 0 {
-				return ErrInvalidLengthRequiredexample
-			}
-			if (iNdEx + skippy) > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.XXX_unrecognized = append(m.XXX_unrecognized, data[iNdEx:iNdEx+skippy]...)
-			iNdEx += skippy
-		}
-	}
-	if hasFields[0]&uint64(0x00000001) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field1")
-	}
-	if hasFields[0]&uint64(0x00000002) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field2")
-	}
-	if hasFields[0]&uint64(0x00000004) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field3")
-	}
-	if hasFields[0]&uint64(0x00000008) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field4")
-	}
-	if hasFields[0]&uint64(0x00000010) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field5")
-	}
-	if hasFields[0]&uint64(0x00000020) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field6")
-	}
-	if hasFields[0]&uint64(0x00000040) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field7")
-	}
-	if hasFields[0]&uint64(0x00000080) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field8")
-	}
-	if hasFields[0]&uint64(0x00000100) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field9")
-	}
-	if hasFields[0]&uint64(0x00000200) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field10")
-	}
-	if hasFields[0]&uint64(0x00000400) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field11")
-	}
-	if hasFields[0]&uint64(0x00000800) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field12")
-	}
-	if hasFields[0]&uint64(0x00001000) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field13")
-	}
-	if hasFields[0]&uint64(0x00002000) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field14")
-	}
-	if hasFields[0]&uint64(0x00004000) == 0 {
-		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field15")
-	}
-
-	return nil
-}
-func (m *NestedNinOptNative) Unmarshal(data []byte) error {
-	l := len(data)
-	iNdEx := 0
-	for iNdEx < l {
-		var wire uint64
-		for shift := uint(0); ; shift += 7 {
-			if iNdEx >= l {
-				return io.ErrUnexpectedEOF
-			}
-			b := data[iNdEx]
-			iNdEx++
-			wire |= (uint64(b) & 0x7F) << shift
-			if b < 0x80 {
-				break
-			}
-		}
-		fieldNum := int32(wire >> 3)
-		wireType := int(wire & 0x7)
-		switch fieldNum {
-		case 1:
-			if wireType != 2 {
-				return fmt.Errorf("proto: wrong wireType = %d for field NestedNinOpts", wireType)
-			}
-			var msglen int
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				msglen |= (int(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			postIndex := iNdEx + msglen
-			if msglen < 0 {
-				return ErrInvalidLengthRequiredexample
-			}
-			if postIndex > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.NestedNinOpts = append(m.NestedNinOpts, &NinOptNative{})
-			if err := m.NestedNinOpts[len(m.NestedNinOpts)-1].Unmarshal(data[iNdEx:postIndex]); err != nil {
-				return err
-			}
-			iNdEx = postIndex
-		default:
-			var sizeOfWire int
-			for {
-				sizeOfWire++
-				wire >>= 7
-				if wire == 0 {
-					break
-				}
-			}
-			iNdEx -= sizeOfWire
-			skippy, err := skipRequiredexample(data[iNdEx:])
-			if err != nil {
-				return err
-			}
-			if skippy < 0 {
-				return ErrInvalidLengthRequiredexample
-			}
-			if (iNdEx + skippy) > l {
-				return io.ErrUnexpectedEOF
-			}
-			m.XXX_unrecognized = append(m.XXX_unrecognized, data[iNdEx:iNdEx+skippy]...)
-			iNdEx += skippy
-		}
-	}
-
-	return nil
-}
-func skipRequiredexample(data []byte) (n int, err error) {
-	l := len(data)
-	iNdEx := 0
-	for iNdEx < l {
-		var wire uint64
-		for shift := uint(0); ; shift += 7 {
-			if iNdEx >= l {
-				return 0, io.ErrUnexpectedEOF
-			}
-			b := data[iNdEx]
-			iNdEx++
-			wire |= (uint64(b) & 0x7F) << shift
-			if b < 0x80 {
-				break
-			}
-		}
-		wireType := int(wire & 0x7)
-		switch wireType {
-		case 0:
-			for {
-				if iNdEx >= l {
-					return 0, io.ErrUnexpectedEOF
-				}
-				iNdEx++
-				if data[iNdEx-1] < 0x80 {
-					break
-				}
-			}
-			return iNdEx, nil
-		case 1:
-			iNdEx += 8
-			return iNdEx, nil
-		case 2:
-			var length int
-			for shift := uint(0); ; shift += 7 {
-				if iNdEx >= l {
-					return 0, io.ErrUnexpectedEOF
-				}
-				b := data[iNdEx]
-				iNdEx++
-				length |= (int(b) & 0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-			iNdEx += length
-			if length < 0 {
-				return 0, ErrInvalidLengthRequiredexample
-			}
-			return iNdEx, nil
-		case 3:
-			for {
-				var innerWire uint64
-				var start int = iNdEx
-				for shift := uint(0); ; shift += 7 {
-					if iNdEx >= l {
-						return 0, io.ErrUnexpectedEOF
-					}
-					b := data[iNdEx]
-					iNdEx++
-					innerWire |= (uint64(b) & 0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				innerWireType := int(innerWire & 0x7)
-				if innerWireType == 4 {
-					break
-				}
-				next, err := skipRequiredexample(data[start:])
-				if err != nil {
-					return 0, err
-				}
-				iNdEx = start + next
-			}
-			return iNdEx, nil
-		case 4:
-			return iNdEx, nil
-		case 5:
-			iNdEx += 4
-			return iNdEx, nil
-		default:
-			return 0, fmt.Errorf("proto: illegal wireType %d", wireType)
-		}
-	}
-	panic("unreachable")
-}
-
-var (
-	ErrInvalidLengthRequiredexample = fmt.Errorf("proto: negative length found during unmarshaling")
-)
-
-func (m *RequiredExample) Size() (n int) {
-	var l int
-	_ = l
-	if m.TheRequiredString != nil {
-		l = len(*m.TheRequiredString)
-		n += 1 + l + sovRequiredexample(uint64(l))
-	}
-	if m.TheOptionalString != nil {
-		l = len(*m.TheOptionalString)
-		n += 1 + l + sovRequiredexample(uint64(l))
-	}
-	if len(m.TheRepeatedStrings) > 0 {
-		for _, s := range m.TheRepeatedStrings {
-			l = len(s)
-			n += 1 + l + sovRequiredexample(uint64(l))
-		}
-	}
-	if m.XXX_unrecognized != nil {
-		n += len(m.XXX_unrecognized)
-	}
-	return n
-}
-
-func (m *NidOptNative) Size() (n int) {
-	var l int
-	_ = l
-	n += 9
-	n += 5
-	n += 1 + sovRequiredexample(uint64(m.Field3))
-	n += 1 + sovRequiredexample(uint64(m.Field4))
-	n += 1 + sovRequiredexample(uint64(m.Field5))
-	n += 1 + sovRequiredexample(uint64(m.Field6))
-	n += 1 + sozRequiredexample(uint64(m.Field7))
-	n += 1 + sozRequiredexample(uint64(m.Field8))
-	n += 5
-	n += 5
-	n += 9
-	n += 9
-	n += 2
-	l = len(m.Field14)
-	n += 1 + l + sovRequiredexample(uint64(l))
-	if m.Field15 != nil {
-		l = len(m.Field15)
-		n += 1 + l + sovRequiredexample(uint64(l))
-	}
-	if m.XXX_unrecognized != nil {
-		n += len(m.XXX_unrecognized)
-	}
-	return n
-}
-
-func (m *NinOptNative) Size() (n int) {
-	var l int
-	_ = l
-	if m.Field1 != nil {
-		n += 9
-	}
-	if m.Field2 != nil {
-		n += 5
-	}
-	if m.Field3 != nil {
-		n += 1 + sovRequiredexample(uint64(*m.Field3))
-	}
-	if m.Field4 != nil {
-		n += 1 + sovRequiredexample(uint64(*m.Field4))
-	}
-	if m.Field5 != nil {
-		n += 1 + sovRequiredexample(uint64(*m.Field5))
-	}
-	if m.Field6 != nil {
-		n += 1 + sovRequiredexample(uint64(*m.Field6))
-	}
-	if m.Field7 != nil {
-		n += 1 + sozRequiredexample(uint64(*m.Field7))
-	}
-	if m.Field8 != nil {
-		n += 1 + sozRequiredexample(uint64(*m.Field8))
-	}
-	if m.Field9 != nil {
-		n += 5
-	}
-	if m.Field10 != nil {
-		n += 5
-	}
-	if m.Field11 != nil {
-		n += 9
-	}
-	if m.Field12 != nil {
-		n += 9
-	}
-	if m.Field13 != nil {
-		n += 2
-	}
-	if m.Field14 != nil {
-		l = len(*m.Field14)
-		n += 1 + l + sovRequiredexample(uint64(l))
-	}
-	if m.Field15 != nil {
-		l = len(m.Field15)
-		n += 1 + l + sovRequiredexample(uint64(l))
-	}
-	if m.XXX_unrecognized != nil {
-		n += len(m.XXX_unrecognized)
-	}
-	return n
-}
-
-func (m *NestedNinOptNative) Size() (n int) {
-	var l int
-	_ = l
-	if len(m.NestedNinOpts) > 0 {
-		for _, e := range m.NestedNinOpts {
-			l = e.Size()
-			n += 1 + l + sovRequiredexample(uint64(l))
-		}
-	}
-	if m.XXX_unrecognized != nil {
-		n += len(m.XXX_unrecognized)
-	}
-	return n
-}
-
-func sovRequiredexample(x uint64) (n int) {
-	for {
-		n++
-		x >>= 7
-		if x == 0 {
-			break
-		}
-	}
-	return n
-}
-func sozRequiredexample(x uint64) (n int) {
-	return sovRequiredexample(uint64((x << 1) ^ uint64((int64(x) >> 63))))
-}
-func NewPopulatedRequiredExample(r randyRequiredexample, easy bool) *RequiredExample {
-	this := &RequiredExample{}
-	v1 := randStringRequiredexample(r)
-	this.TheRequiredString = &v1
-	if r.Intn(10) != 0 {
-		v2 := randStringRequiredexample(r)
-		this.TheOptionalString = &v2
-	}
-	if r.Intn(10) != 0 {
-		v3 := r.Intn(10)
-		this.TheRepeatedStrings = make([]string, v3)
-		for i := 0; i < v3; i++ {
-			this.TheRepeatedStrings[i] = randStringRequiredexample(r)
-		}
-	}
-	if !easy && r.Intn(10) != 0 {
-		this.XXX_unrecognized = randUnrecognizedRequiredexample(r, 4)
-	}
-	return this
-}
-
-func NewPopulatedNidOptNative(r randyRequiredexample, easy bool) *NidOptNative {
-	this := &NidOptNative{}
-	this.Field1 = float64(r.Float64())
-	if r.Intn(2) == 0 {
-		this.Field1 *= -1
-	}
-	this.Field2 = float32(r.Float32())
-	if r.Intn(2) == 0 {
-		this.Field2 *= -1
-	}
-	this.Field3 = int32(r.Int31())
-	if r.Intn(2) == 0 {
-		this.Field3 *= -1
-	}
-	this.Field4 = int64(r.Int63())
-	if r.Intn(2) == 0 {
-		this.Field4 *= -1
-	}
-	this.Field5 = uint32(r.Uint32())
-	this.Field6 = uint64(uint64(r.Uint32()))
-	this.Field7 = int32(r.Int31())
-	if r.Intn(2) == 0 {
-		this.Field7 *= -1
-	}
-	this.Field8 = int64(r.Int63())
-	if r.Intn(2) == 0 {
-		this.Field8 *= -1
-	}
-	this.Field9 = uint32(r.Uint32())
-	this.Field10 = int32(r.Int31())
-	if r.Intn(2) == 0 {
-		this.Field10 *= -1
-	}
-	this.Field11 = uint64(uint64(r.Uint32()))
-	this.Field12 = int64(r.Int63())
-	if r.Intn(2) == 0 {
-		this.Field12 *= -1
-	}
-	this.Field13 = bool(bool(r.Intn(2) == 0))
-	this.Field14 = randStringRequiredexample(r)
-	v4 := r.Intn(100)
-	this.Field15 = make([]byte, v4)
-	for i := 0; i < v4; i++ {
-		this.Field15[i] = byte(r.Intn(256))
-	}
-	if !easy && r.Intn(10) != 0 {
-		this.XXX_unrecognized = randUnrecognizedRequiredexample(r, 16)
-	}
-	return this
-}
-
-func NewPopulatedNinOptNative(r randyRequiredexample, easy bool) *NinOptNative {
-	this := &NinOptNative{}
-	v5 := float64(r.Float64())
-	if r.Intn(2) == 0 {
-		v5 *= -1
-	}
-	this.Field1 = &v5
-	v6 := float32(r.Float32())
-	if r.Intn(2) == 0 {
-		v6 *= -1
-	}
-	this.Field2 = &v6
-	v7 := int32(r.Int31())
-	if r.Intn(2) == 0 {
-		v7 *= -1
-	}
-	this.Field3 = &v7
-	v8 := int64(r.Int63())
-	if r.Intn(2) == 0 {
-		v8 *= -1
-	}
-	this.Field4 = &v8
-	v9 := uint32(r.Uint32())
-	this.Field5 = &v9
-	v10 := uint64(uint64(r.Uint32()))
-	this.Field6 = &v10
-	v11 := int32(r.Int31())
-	if r.Intn(2) == 0 {
-		v11 *= -1
-	}
-	this.Field7 = &v11
-	v12 := int64(r.Int63())
-	if r.Intn(2) == 0 {
-		v12 *= -1
-	}
-	this.Field8 = &v12
-	v13 := uint32(r.Uint32())
-	this.Field9 = &v13
-	v14 := int32(r.Int31())
-	if r.Intn(2) == 0 {
-		v14 *= -1
-	}
-	this.Field10 = &v14
-	v15 := uint64(uint64(r.Uint32()))
-	this.Field11 = &v15
-	v16 := int64(r.Int63())
-	if r.Intn(2) == 0 {
-		v16 *= -1
-	}
-	this.Field12 = &v16
-	v17 := bool(bool(r.Intn(2) == 0))
-	this.Field13 = &v17
-	v18 := randStringRequiredexample(r)
-	this.Field14 = &v18
-	v19 := r.Intn(100)
-	this.Field15 = make([]byte, v19)
-	for i := 0; i < v19; i++ {
-		this.Field15[i] = byte(r.Intn(256))
-	}
-	if !easy && r.Intn(10) != 0 {
-		this.XXX_unrecognized = randUnrecognizedRequiredexample(r, 16)
-	}
-	return this
-}
-
-func NewPopulatedNestedNinOptNative(r randyRequiredexample, easy bool) *NestedNinOptNative {
-	this := &NestedNinOptNative{}
-	if r.Intn(10) != 0 {
-		v20 := r.Intn(10)
-		this.NestedNinOpts = make([]*NinOptNative, v20)
-		for i := 0; i < v20; i++ {
-			this.NestedNinOpts[i] = NewPopulatedNinOptNative(r, easy)
-		}
-	}
-	if !easy && r.Intn(10) != 0 {
-		this.XXX_unrecognized = randUnrecognizedRequiredexample(r, 2)
-	}
-	return this
-}
-
-type randyRequiredexample interface {
-	Float32() float32
-	Float64() float64
-	Int63() int64
-	Int31() int32
-	Uint32() uint32
-	Intn(n int) int
-}
-
-func randUTF8RuneRequiredexample(r randyRequiredexample) rune {
-	ru := r.Intn(62)
-	if ru < 10 {
-		return rune(ru + 48)
-	} else if ru < 36 {
-		return rune(ru + 55)
-	}
-	return rune(ru + 61)
-}
-func randStringRequiredexample(r randyRequiredexample) string {
-	v21 := r.Intn(100)
-	tmps := make([]rune, v21)
-	for i := 0; i < v21; i++ {
-		tmps[i] = randUTF8RuneRequiredexample(r)
-	}
-	return string(tmps)
-}
-func randUnrecognizedRequiredexample(r randyRequiredexample, maxFieldNumber int) (data []byte) {
-	l := r.Intn(5)
-	for i := 0; i < l; i++ {
-		wire := r.Intn(4)
-		if wire == 3 {
-			wire = 5
-		}
-		fieldNumber := maxFieldNumber + r.Intn(100)
-		data = randFieldRequiredexample(data, r, fieldNumber, wire)
-	}
-	return data
-}
-func randFieldRequiredexample(data []byte, r randyRequiredexample, fieldNumber int, wire int) []byte {
-	key := uint32(fieldNumber)<<3 | uint32(wire)
-	switch wire {
-	case 0:
-		data = encodeVarintPopulateRequiredexample(data, uint64(key))
-		v22 := r.Int63()
-		if r.Intn(2) == 0 {
-			v22 *= -1
-		}
-		data = encodeVarintPopulateRequiredexample(data, uint64(v22))
-	case 1:
-		data = encodeVarintPopulateRequiredexample(data, uint64(key))
-		data = append(data, byte(r.Intn(256)), byte(r.Intn(256)), byte(r.Intn(256)), byte(r.Intn(256)), byte(r.Intn(256)), byte(r.Intn(256)), byte(r.Intn(256)), byte(r.Intn(256)))
-	case 2:
-		data = encodeVarintPopulateRequiredexample(data, uint64(key))
-		ll := r.Intn(100)
-		data = encodeVarintPopulateRequiredexample(data, uint64(ll))
-		for j := 0; j < ll; j++ {
-			data = append(data, byte(r.Intn(256)))
-		}
-	default:
-		data = encodeVarintPopulateRequiredexample(data, uint64(key))
-		data = append(data, byte(r.Intn(256)), byte(r.Intn(256)), byte(r.Intn(256)), byte(r.Intn(256)))
-	}
-	return data
-}
-func encodeVarintPopulateRequiredexample(data []byte, v uint64) []byte {
-	for v >= 1<<7 {
-		data = append(data, uint8(uint64(v)&0x7f|0x80))
-		v >>= 7
-	}
-	data = append(data, uint8(v))
-	return data
-}
 func (m *RequiredExample) Marshal() (data []byte, err error) {
 	size := m.Size()
 	data = make([]byte, size)
@@ -2034,3 +653,1504 @@ func encodeVarintRequiredexample(data []byte, offset int, v uint64) int {
 	data[offset] = uint8(v)
 	return offset + 1
 }
+func NewPopulatedRequiredExample(r randyRequiredexample, easy bool) *RequiredExample {
+	this := &RequiredExample{}
+	v1 := randStringRequiredexample(r)
+	this.TheRequiredString = &v1
+	if r.Intn(10) != 0 {
+		v2 := randStringRequiredexample(r)
+		this.TheOptionalString = &v2
+	}
+	if r.Intn(10) != 0 {
+		v3 := r.Intn(10)
+		this.TheRepeatedStrings = make([]string, v3)
+		for i := 0; i < v3; i++ {
+			this.TheRepeatedStrings[i] = randStringRequiredexample(r)
+		}
+	}
+	if !easy && r.Intn(10) != 0 {
+		this.XXX_unrecognized = randUnrecognizedRequiredexample(r, 4)
+	}
+	return this
+}
+
+func NewPopulatedNidOptNative(r randyRequiredexample, easy bool) *NidOptNative {
+	this := &NidOptNative{}
+	this.Field1 = float64(r.Float64())
+	if r.Intn(2) == 0 {
+		this.Field1 *= -1
+	}
+	this.Field2 = float32(r.Float32())
+	if r.Intn(2) == 0 {
+		this.Field2 *= -1
+	}
+	this.Field3 = int32(r.Int31())
+	if r.Intn(2) == 0 {
+		this.Field3 *= -1
+	}
+	this.Field4 = int64(r.Int63())
+	if r.Intn(2) == 0 {
+		this.Field4 *= -1
+	}
+	this.Field5 = uint32(r.Uint32())
+	this.Field6 = uint64(uint64(r.Uint32()))
+	this.Field7 = int32(r.Int31())
+	if r.Intn(2) == 0 {
+		this.Field7 *= -1
+	}
+	this.Field8 = int64(r.Int63())
+	if r.Intn(2) == 0 {
+		this.Field8 *= -1
+	}
+	this.Field9 = uint32(r.Uint32())
+	this.Field10 = int32(r.Int31())
+	if r.Intn(2) == 0 {
+		this.Field10 *= -1
+	}
+	this.Field11 = uint64(uint64(r.Uint32()))
+	this.Field12 = int64(r.Int63())
+	if r.Intn(2) == 0 {
+		this.Field12 *= -1
+	}
+	this.Field13 = bool(bool(r.Intn(2) == 0))
+	this.Field14 = randStringRequiredexample(r)
+	v4 := r.Intn(100)
+	this.Field15 = make([]byte, v4)
+	for i := 0; i < v4; i++ {
+		this.Field15[i] = byte(r.Intn(256))
+	}
+	if !easy && r.Intn(10) != 0 {
+		this.XXX_unrecognized = randUnrecognizedRequiredexample(r, 16)
+	}
+	return this
+}
+
+func NewPopulatedNinOptNative(r randyRequiredexample, easy bool) *NinOptNative {
+	this := &NinOptNative{}
+	v5 := float64(r.Float64())
+	if r.Intn(2) == 0 {
+		v5 *= -1
+	}
+	this.Field1 = &v5
+	v6 := float32(r.Float32())
+	if r.Intn(2) == 0 {
+		v6 *= -1
+	}
+	this.Field2 = &v6
+	v7 := int32(r.Int31())
+	if r.Intn(2) == 0 {
+		v7 *= -1
+	}
+	this.Field3 = &v7
+	v8 := int64(r.Int63())
+	if r.Intn(2) == 0 {
+		v8 *= -1
+	}
+	this.Field4 = &v8
+	v9 := uint32(r.Uint32())
+	this.Field5 = &v9
+	v10 := uint64(uint64(r.Uint32()))
+	this.Field6 = &v10
+	v11 := int32(r.Int31())
+	if r.Intn(2) == 0 {
+		v11 *= -1
+	}
+	this.Field7 = &v11
+	v12 := int64(r.Int63())
+	if r.Intn(2) == 0 {
+		v12 *= -1
+	}
+	this.Field8 = &v12
+	v13 := uint32(r.Uint32())
+	this.Field9 = &v13
+	v14 := int32(r.Int31())
+	if r.Intn(2) == 0 {
+		v14 *= -1
+	}
+	this.Field10 = &v14
+	v15 := uint64(uint64(r.Uint32()))
+	this.Field11 = &v15
+	v16 := int64(r.Int63())
+	if r.Intn(2) == 0 {
+		v16 *= -1
+	}
+	this.Field12 = &v16
+	v17 := bool(bool(r.Intn(2) == 0))
+	this.Field13 = &v17
+	v18 := randStringRequiredexample(r)
+	this.Field14 = &v18
+	v19 := r.Intn(100)
+	this.Field15 = make([]byte, v19)
+	for i := 0; i < v19; i++ {
+		this.Field15[i] = byte(r.Intn(256))
+	}
+	if !easy && r.Intn(10) != 0 {
+		this.XXX_unrecognized = randUnrecognizedRequiredexample(r, 16)
+	}
+	return this
+}
+
+func NewPopulatedNestedNinOptNative(r randyRequiredexample, easy bool) *NestedNinOptNative {
+	this := &NestedNinOptNative{}
+	if r.Intn(10) != 0 {
+		v20 := r.Intn(10)
+		this.NestedNinOpts = make([]*NinOptNative, v20)
+		for i := 0; i < v20; i++ {
+			this.NestedNinOpts[i] = NewPopulatedNinOptNative(r, easy)
+		}
+	}
+	if !easy && r.Intn(10) != 0 {
+		this.XXX_unrecognized = randUnrecognizedRequiredexample(r, 2)
+	}
+	return this
+}
+
+type randyRequiredexample interface {
+	Float32() float32
+	Float64() float64
+	Int63() int64
+	Int31() int32
+	Uint32() uint32
+	Intn(n int) int
+}
+
+func randUTF8RuneRequiredexample(r randyRequiredexample) rune {
+	ru := r.Intn(62)
+	if ru < 10 {
+		return rune(ru + 48)
+	} else if ru < 36 {
+		return rune(ru + 55)
+	}
+	return rune(ru + 61)
+}
+func randStringRequiredexample(r randyRequiredexample) string {
+	v21 := r.Intn(100)
+	tmps := make([]rune, v21)
+	for i := 0; i < v21; i++ {
+		tmps[i] = randUTF8RuneRequiredexample(r)
+	}
+	return string(tmps)
+}
+func randUnrecognizedRequiredexample(r randyRequiredexample, maxFieldNumber int) (data []byte) {
+	l := r.Intn(5)
+	for i := 0; i < l; i++ {
+		wire := r.Intn(4)
+		if wire == 3 {
+			wire = 5
+		}
+		fieldNumber := maxFieldNumber + r.Intn(100)
+		data = randFieldRequiredexample(data, r, fieldNumber, wire)
+	}
+	return data
+}
+func randFieldRequiredexample(data []byte, r randyRequiredexample, fieldNumber int, wire int) []byte {
+	key := uint32(fieldNumber)<<3 | uint32(wire)
+	switch wire {
+	case 0:
+		data = encodeVarintPopulateRequiredexample(data, uint64(key))
+		v22 := r.Int63()
+		if r.Intn(2) == 0 {
+			v22 *= -1
+		}
+		data = encodeVarintPopulateRequiredexample(data, uint64(v22))
+	case 1:
+		data = encodeVarintPopulateRequiredexample(data, uint64(key))
+		data = append(data, byte(r.Intn(256)), byte(r.Intn(256)), byte(r.Intn(256)), byte(r.Intn(256)), byte(r.Intn(256)), byte(r.Intn(256)), byte(r.Intn(256)), byte(r.Intn(256)))
+	case 2:
+		data = encodeVarintPopulateRequiredexample(data, uint64(key))
+		ll := r.Intn(100)
+		data = encodeVarintPopulateRequiredexample(data, uint64(ll))
+		for j := 0; j < ll; j++ {
+			data = append(data, byte(r.Intn(256)))
+		}
+	default:
+		data = encodeVarintPopulateRequiredexample(data, uint64(key))
+		data = append(data, byte(r.Intn(256)), byte(r.Intn(256)), byte(r.Intn(256)), byte(r.Intn(256)))
+	}
+	return data
+}
+func encodeVarintPopulateRequiredexample(data []byte, v uint64) []byte {
+	for v >= 1<<7 {
+		data = append(data, uint8(uint64(v)&0x7f|0x80))
+		v >>= 7
+	}
+	data = append(data, uint8(v))
+	return data
+}
+func (m *RequiredExample) Size() (n int) {
+	var l int
+	_ = l
+	if m.TheRequiredString != nil {
+		l = len(*m.TheRequiredString)
+		n += 1 + l + sovRequiredexample(uint64(l))
+	}
+	if m.TheOptionalString != nil {
+		l = len(*m.TheOptionalString)
+		n += 1 + l + sovRequiredexample(uint64(l))
+	}
+	if len(m.TheRepeatedStrings) > 0 {
+		for _, s := range m.TheRepeatedStrings {
+			l = len(s)
+			n += 1 + l + sovRequiredexample(uint64(l))
+		}
+	}
+	if m.XXX_unrecognized != nil {
+		n += len(m.XXX_unrecognized)
+	}
+	return n
+}
+
+func (m *NidOptNative) Size() (n int) {
+	var l int
+	_ = l
+	n += 9
+	n += 5
+	n += 1 + sovRequiredexample(uint64(m.Field3))
+	n += 1 + sovRequiredexample(uint64(m.Field4))
+	n += 1 + sovRequiredexample(uint64(m.Field5))
+	n += 1 + sovRequiredexample(uint64(m.Field6))
+	n += 1 + sozRequiredexample(uint64(m.Field7))
+	n += 1 + sozRequiredexample(uint64(m.Field8))
+	n += 5
+	n += 5
+	n += 9
+	n += 9
+	n += 2
+	l = len(m.Field14)
+	n += 1 + l + sovRequiredexample(uint64(l))
+	if m.Field15 != nil {
+		l = len(m.Field15)
+		n += 1 + l + sovRequiredexample(uint64(l))
+	}
+	if m.XXX_unrecognized != nil {
+		n += len(m.XXX_unrecognized)
+	}
+	return n
+}
+
+func (m *NinOptNative) Size() (n int) {
+	var l int
+	_ = l
+	if m.Field1 != nil {
+		n += 9
+	}
+	if m.Field2 != nil {
+		n += 5
+	}
+	if m.Field3 != nil {
+		n += 1 + sovRequiredexample(uint64(*m.Field3))
+	}
+	if m.Field4 != nil {
+		n += 1 + sovRequiredexample(uint64(*m.Field4))
+	}
+	if m.Field5 != nil {
+		n += 1 + sovRequiredexample(uint64(*m.Field5))
+	}
+	if m.Field6 != nil {
+		n += 1 + sovRequiredexample(uint64(*m.Field6))
+	}
+	if m.Field7 != nil {
+		n += 1 + sozRequiredexample(uint64(*m.Field7))
+	}
+	if m.Field8 != nil {
+		n += 1 + sozRequiredexample(uint64(*m.Field8))
+	}
+	if m.Field9 != nil {
+		n += 5
+	}
+	if m.Field10 != nil {
+		n += 5
+	}
+	if m.Field11 != nil {
+		n += 9
+	}
+	if m.Field12 != nil {
+		n += 9
+	}
+	if m.Field13 != nil {
+		n += 2
+	}
+	if m.Field14 != nil {
+		l = len(*m.Field14)
+		n += 1 + l + sovRequiredexample(uint64(l))
+	}
+	if m.Field15 != nil {
+		l = len(m.Field15)
+		n += 1 + l + sovRequiredexample(uint64(l))
+	}
+	if m.XXX_unrecognized != nil {
+		n += len(m.XXX_unrecognized)
+	}
+	return n
+}
+
+func (m *NestedNinOptNative) Size() (n int) {
+	var l int
+	_ = l
+	if len(m.NestedNinOpts) > 0 {
+		for _, e := range m.NestedNinOpts {
+			l = e.Size()
+			n += 1 + l + sovRequiredexample(uint64(l))
+		}
+	}
+	if m.XXX_unrecognized != nil {
+		n += len(m.XXX_unrecognized)
+	}
+	return n
+}
+
+func sovRequiredexample(x uint64) (n int) {
+	for {
+		n++
+		x >>= 7
+		if x == 0 {
+			break
+		}
+	}
+	return n
+}
+func sozRequiredexample(x uint64) (n int) {
+	return sovRequiredexample(uint64((x << 1) ^ uint64((int64(x) >> 63))))
+}
+func (m *RequiredExample) Unmarshal(data []byte) error {
+	var hasFields [1]uint64
+	l := len(data)
+	iNdEx := 0
+	for iNdEx < l {
+		preIndex := iNdEx
+		var wire uint64
+		for shift := uint(0); ; shift += 7 {
+			if shift >= 64 {
+				return ErrIntOverflowRequiredexample
+			}
+			if iNdEx >= l {
+				return io.ErrUnexpectedEOF
+			}
+			b := data[iNdEx]
+			iNdEx++
+			wire |= (uint64(b) & 0x7F) << shift
+			if b < 0x80 {
+				break
+			}
+		}
+		fieldNum := int32(wire >> 3)
+		wireType := int(wire & 0x7)
+		if wireType == 4 {
+			return fmt.Errorf("proto: RequiredExample: wiretype end group for non-group")
+		}
+		if fieldNum <= 0 {
+			return fmt.Errorf("proto: RequiredExample: illegal tag %d (wire type %d)", fieldNum, wire)
+		}
+		switch fieldNum {
+		case 1:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field TheRequiredString", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				stringLen |= (uint64(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			intStringLen := int(stringLen)
+			if intStringLen < 0 {
+				return ErrInvalidLengthRequiredexample
+			}
+			postIndex := iNdEx + intStringLen
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			s := string(data[iNdEx:postIndex])
+			m.TheRequiredString = &s
+			iNdEx = postIndex
+			hasFields[0] |= uint64(0x00000001)
+		case 2:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field TheOptionalString", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				stringLen |= (uint64(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			intStringLen := int(stringLen)
+			if intStringLen < 0 {
+				return ErrInvalidLengthRequiredexample
+			}
+			postIndex := iNdEx + intStringLen
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			s := string(data[iNdEx:postIndex])
+			m.TheOptionalString = &s
+			iNdEx = postIndex
+		case 3:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field TheRepeatedStrings", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				stringLen |= (uint64(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			intStringLen := int(stringLen)
+			if intStringLen < 0 {
+				return ErrInvalidLengthRequiredexample
+			}
+			postIndex := iNdEx + intStringLen
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.TheRepeatedStrings = append(m.TheRepeatedStrings, string(data[iNdEx:postIndex]))
+			iNdEx = postIndex
+		default:
+			iNdEx = preIndex
+			skippy, err := skipRequiredexample(data[iNdEx:])
+			if err != nil {
+				return err
+			}
+			if skippy < 0 {
+				return ErrInvalidLengthRequiredexample
+			}
+			if (iNdEx + skippy) > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.XXX_unrecognized = append(m.XXX_unrecognized, data[iNdEx:iNdEx+skippy]...)
+			iNdEx += skippy
+		}
+	}
+	if hasFields[0]&uint64(0x00000001) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("theRequiredString")
+	}
+
+	if iNdEx > l {
+		return io.ErrUnexpectedEOF
+	}
+	return nil
+}
+func (m *NidOptNative) Unmarshal(data []byte) error {
+	var hasFields [1]uint64
+	l := len(data)
+	iNdEx := 0
+	for iNdEx < l {
+		preIndex := iNdEx
+		var wire uint64
+		for shift := uint(0); ; shift += 7 {
+			if shift >= 64 {
+				return ErrIntOverflowRequiredexample
+			}
+			if iNdEx >= l {
+				return io.ErrUnexpectedEOF
+			}
+			b := data[iNdEx]
+			iNdEx++
+			wire |= (uint64(b) & 0x7F) << shift
+			if b < 0x80 {
+				break
+			}
+		}
+		fieldNum := int32(wire >> 3)
+		wireType := int(wire & 0x7)
+		if wireType == 4 {
+			return fmt.Errorf("proto: NidOptNative: wiretype end group for non-group")
+		}
+		if fieldNum <= 0 {
+			return fmt.Errorf("proto: NidOptNative: illegal tag %d (wire type %d)", fieldNum, wire)
+		}
+		switch fieldNum {
+		case 1:
+			if wireType != 1 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field1", wireType)
+			}
+			var v uint64
+			if (iNdEx + 8) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += 8
+			v = uint64(data[iNdEx-8])
+			v |= uint64(data[iNdEx-7]) << 8
+			v |= uint64(data[iNdEx-6]) << 16
+			v |= uint64(data[iNdEx-5]) << 24
+			v |= uint64(data[iNdEx-4]) << 32
+			v |= uint64(data[iNdEx-3]) << 40
+			v |= uint64(data[iNdEx-2]) << 48
+			v |= uint64(data[iNdEx-1]) << 56
+			m.Field1 = float64(math.Float64frombits(v))
+			hasFields[0] |= uint64(0x00000001)
+		case 2:
+			if wireType != 5 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field2", wireType)
+			}
+			var v uint32
+			if (iNdEx + 4) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += 4
+			v = uint32(data[iNdEx-4])
+			v |= uint32(data[iNdEx-3]) << 8
+			v |= uint32(data[iNdEx-2]) << 16
+			v |= uint32(data[iNdEx-1]) << 24
+			m.Field2 = float32(math.Float32frombits(v))
+			hasFields[0] |= uint64(0x00000002)
+		case 3:
+			if wireType != 0 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field3", wireType)
+			}
+			m.Field3 = 0
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				m.Field3 |= (int32(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			hasFields[0] |= uint64(0x00000004)
+		case 4:
+			if wireType != 0 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field4", wireType)
+			}
+			m.Field4 = 0
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				m.Field4 |= (int64(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			hasFields[0] |= uint64(0x00000008)
+		case 5:
+			if wireType != 0 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field5", wireType)
+			}
+			m.Field5 = 0
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				m.Field5 |= (uint32(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			hasFields[0] |= uint64(0x00000010)
+		case 6:
+			if wireType != 0 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field6", wireType)
+			}
+			m.Field6 = 0
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				m.Field6 |= (uint64(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			hasFields[0] |= uint64(0x00000020)
+		case 7:
+			if wireType != 0 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field7", wireType)
+			}
+			var v int32
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				v |= (int32(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			v = int32((uint32(v) >> 1) ^ uint32(((v&1)<<31)>>31))
+			m.Field7 = v
+			hasFields[0] |= uint64(0x00000040)
+		case 8:
+			if wireType != 0 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field8", wireType)
+			}
+			var v uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				v |= (uint64(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			v = (v >> 1) ^ uint64((int64(v&1)<<63)>>63)
+			m.Field8 = int64(v)
+			hasFields[0] |= uint64(0x00000080)
+		case 9:
+			if wireType != 5 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field9", wireType)
+			}
+			m.Field9 = 0
+			if (iNdEx + 4) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += 4
+			m.Field9 = uint32(data[iNdEx-4])
+			m.Field9 |= uint32(data[iNdEx-3]) << 8
+			m.Field9 |= uint32(data[iNdEx-2]) << 16
+			m.Field9 |= uint32(data[iNdEx-1]) << 24
+			hasFields[0] |= uint64(0x00000100)
+		case 10:
+			if wireType != 5 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field10", wireType)
+			}
+			m.Field10 = 0
+			if (iNdEx + 4) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += 4
+			m.Field10 = int32(data[iNdEx-4])
+			m.Field10 |= int32(data[iNdEx-3]) << 8
+			m.Field10 |= int32(data[iNdEx-2]) << 16
+			m.Field10 |= int32(data[iNdEx-1]) << 24
+			hasFields[0] |= uint64(0x00000200)
+		case 11:
+			if wireType != 1 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field11", wireType)
+			}
+			m.Field11 = 0
+			if (iNdEx + 8) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += 8
+			m.Field11 = uint64(data[iNdEx-8])
+			m.Field11 |= uint64(data[iNdEx-7]) << 8
+			m.Field11 |= uint64(data[iNdEx-6]) << 16
+			m.Field11 |= uint64(data[iNdEx-5]) << 24
+			m.Field11 |= uint64(data[iNdEx-4]) << 32
+			m.Field11 |= uint64(data[iNdEx-3]) << 40
+			m.Field11 |= uint64(data[iNdEx-2]) << 48
+			m.Field11 |= uint64(data[iNdEx-1]) << 56
+			hasFields[0] |= uint64(0x00000400)
+		case 12:
+			if wireType != 1 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field12", wireType)
+			}
+			m.Field12 = 0
+			if (iNdEx + 8) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += 8
+			m.Field12 = int64(data[iNdEx-8])
+			m.Field12 |= int64(data[iNdEx-7]) << 8
+			m.Field12 |= int64(data[iNdEx-6]) << 16
+			m.Field12 |= int64(data[iNdEx-5]) << 24
+			m.Field12 |= int64(data[iNdEx-4]) << 32
+			m.Field12 |= int64(data[iNdEx-3]) << 40
+			m.Field12 |= int64(data[iNdEx-2]) << 48
+			m.Field12 |= int64(data[iNdEx-1]) << 56
+			hasFields[0] |= uint64(0x00000800)
+		case 13:
+			if wireType != 0 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field13", wireType)
+			}
+			var v int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				v |= (int(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			m.Field13 = bool(v != 0)
+			hasFields[0] |= uint64(0x00001000)
+		case 14:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field14", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				stringLen |= (uint64(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			intStringLen := int(stringLen)
+			if intStringLen < 0 {
+				return ErrInvalidLengthRequiredexample
+			}
+			postIndex := iNdEx + intStringLen
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.Field14 = string(data[iNdEx:postIndex])
+			iNdEx = postIndex
+			hasFields[0] |= uint64(0x00002000)
+		case 15:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field15", wireType)
+			}
+			var byteLen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				byteLen |= (int(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if byteLen < 0 {
+				return ErrInvalidLengthRequiredexample
+			}
+			postIndex := iNdEx + byteLen
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.Field15 = append([]byte{}, data[iNdEx:postIndex]...)
+			iNdEx = postIndex
+			hasFields[0] |= uint64(0x00004000)
+		default:
+			iNdEx = preIndex
+			skippy, err := skipRequiredexample(data[iNdEx:])
+			if err != nil {
+				return err
+			}
+			if skippy < 0 {
+				return ErrInvalidLengthRequiredexample
+			}
+			if (iNdEx + skippy) > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.XXX_unrecognized = append(m.XXX_unrecognized, data[iNdEx:iNdEx+skippy]...)
+			iNdEx += skippy
+		}
+	}
+	if hasFields[0]&uint64(0x00000001) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field1")
+	}
+	if hasFields[0]&uint64(0x00000002) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field2")
+	}
+	if hasFields[0]&uint64(0x00000004) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field3")
+	}
+	if hasFields[0]&uint64(0x00000008) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field4")
+	}
+	if hasFields[0]&uint64(0x00000010) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field5")
+	}
+	if hasFields[0]&uint64(0x00000020) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field6")
+	}
+	if hasFields[0]&uint64(0x00000040) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field7")
+	}
+	if hasFields[0]&uint64(0x00000080) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field8")
+	}
+	if hasFields[0]&uint64(0x00000100) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field9")
+	}
+	if hasFields[0]&uint64(0x00000200) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field10")
+	}
+	if hasFields[0]&uint64(0x00000400) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field11")
+	}
+	if hasFields[0]&uint64(0x00000800) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field12")
+	}
+	if hasFields[0]&uint64(0x00001000) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field13")
+	}
+	if hasFields[0]&uint64(0x00002000) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field14")
+	}
+	if hasFields[0]&uint64(0x00004000) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field15")
+	}
+
+	if iNdEx > l {
+		return io.ErrUnexpectedEOF
+	}
+	return nil
+}
+func (m *NinOptNative) Unmarshal(data []byte) error {
+	var hasFields [1]uint64
+	l := len(data)
+	iNdEx := 0
+	for iNdEx < l {
+		preIndex := iNdEx
+		var wire uint64
+		for shift := uint(0); ; shift += 7 {
+			if shift >= 64 {
+				return ErrIntOverflowRequiredexample
+			}
+			if iNdEx >= l {
+				return io.ErrUnexpectedEOF
+			}
+			b := data[iNdEx]
+			iNdEx++
+			wire |= (uint64(b) & 0x7F) << shift
+			if b < 0x80 {
+				break
+			}
+		}
+		fieldNum := int32(wire >> 3)
+		wireType := int(wire & 0x7)
+		if wireType == 4 {
+			return fmt.Errorf("proto: NinOptNative: wiretype end group for non-group")
+		}
+		if fieldNum <= 0 {
+			return fmt.Errorf("proto: NinOptNative: illegal tag %d (wire type %d)", fieldNum, wire)
+		}
+		switch fieldNum {
+		case 1:
+			if wireType != 1 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field1", wireType)
+			}
+			var v uint64
+			if (iNdEx + 8) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += 8
+			v = uint64(data[iNdEx-8])
+			v |= uint64(data[iNdEx-7]) << 8
+			v |= uint64(data[iNdEx-6]) << 16
+			v |= uint64(data[iNdEx-5]) << 24
+			v |= uint64(data[iNdEx-4]) << 32
+			v |= uint64(data[iNdEx-3]) << 40
+			v |= uint64(data[iNdEx-2]) << 48
+			v |= uint64(data[iNdEx-1]) << 56
+			v2 := float64(math.Float64frombits(v))
+			m.Field1 = &v2
+			hasFields[0] |= uint64(0x00000001)
+		case 2:
+			if wireType != 5 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field2", wireType)
+			}
+			var v uint32
+			if (iNdEx + 4) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += 4
+			v = uint32(data[iNdEx-4])
+			v |= uint32(data[iNdEx-3]) << 8
+			v |= uint32(data[iNdEx-2]) << 16
+			v |= uint32(data[iNdEx-1]) << 24
+			v2 := float32(math.Float32frombits(v))
+			m.Field2 = &v2
+			hasFields[0] |= uint64(0x00000002)
+		case 3:
+			if wireType != 0 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field3", wireType)
+			}
+			var v int32
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				v |= (int32(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			m.Field3 = &v
+			hasFields[0] |= uint64(0x00000004)
+		case 4:
+			if wireType != 0 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field4", wireType)
+			}
+			var v int64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				v |= (int64(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			m.Field4 = &v
+			hasFields[0] |= uint64(0x00000008)
+		case 5:
+			if wireType != 0 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field5", wireType)
+			}
+			var v uint32
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				v |= (uint32(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			m.Field5 = &v
+			hasFields[0] |= uint64(0x00000010)
+		case 6:
+			if wireType != 0 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field6", wireType)
+			}
+			var v uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				v |= (uint64(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			m.Field6 = &v
+			hasFields[0] |= uint64(0x00000020)
+		case 7:
+			if wireType != 0 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field7", wireType)
+			}
+			var v int32
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				v |= (int32(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			v = int32((uint32(v) >> 1) ^ uint32(((v&1)<<31)>>31))
+			m.Field7 = &v
+			hasFields[0] |= uint64(0x00000040)
+		case 8:
+			if wireType != 0 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field8", wireType)
+			}
+			var v uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				v |= (uint64(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			v = (v >> 1) ^ uint64((int64(v&1)<<63)>>63)
+			v2 := int64(v)
+			m.Field8 = &v2
+			hasFields[0] |= uint64(0x00000080)
+		case 9:
+			if wireType != 5 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field9", wireType)
+			}
+			var v uint32
+			if (iNdEx + 4) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += 4
+			v = uint32(data[iNdEx-4])
+			v |= uint32(data[iNdEx-3]) << 8
+			v |= uint32(data[iNdEx-2]) << 16
+			v |= uint32(data[iNdEx-1]) << 24
+			m.Field9 = &v
+			hasFields[0] |= uint64(0x00000100)
+		case 10:
+			if wireType != 5 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field10", wireType)
+			}
+			var v int32
+			if (iNdEx + 4) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += 4
+			v = int32(data[iNdEx-4])
+			v |= int32(data[iNdEx-3]) << 8
+			v |= int32(data[iNdEx-2]) << 16
+			v |= int32(data[iNdEx-1]) << 24
+			m.Field10 = &v
+			hasFields[0] |= uint64(0x00000200)
+		case 11:
+			if wireType != 1 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field11", wireType)
+			}
+			var v uint64
+			if (iNdEx + 8) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += 8
+			v = uint64(data[iNdEx-8])
+			v |= uint64(data[iNdEx-7]) << 8
+			v |= uint64(data[iNdEx-6]) << 16
+			v |= uint64(data[iNdEx-5]) << 24
+			v |= uint64(data[iNdEx-4]) << 32
+			v |= uint64(data[iNdEx-3]) << 40
+			v |= uint64(data[iNdEx-2]) << 48
+			v |= uint64(data[iNdEx-1]) << 56
+			m.Field11 = &v
+			hasFields[0] |= uint64(0x00000400)
+		case 12:
+			if wireType != 1 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field12", wireType)
+			}
+			var v int64
+			if (iNdEx + 8) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += 8
+			v = int64(data[iNdEx-8])
+			v |= int64(data[iNdEx-7]) << 8
+			v |= int64(data[iNdEx-6]) << 16
+			v |= int64(data[iNdEx-5]) << 24
+			v |= int64(data[iNdEx-4]) << 32
+			v |= int64(data[iNdEx-3]) << 40
+			v |= int64(data[iNdEx-2]) << 48
+			v |= int64(data[iNdEx-1]) << 56
+			m.Field12 = &v
+			hasFields[0] |= uint64(0x00000800)
+		case 13:
+			if wireType != 0 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field13", wireType)
+			}
+			var v int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				v |= (int(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			b := bool(v != 0)
+			m.Field13 = &b
+			hasFields[0] |= uint64(0x00001000)
+		case 14:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field14", wireType)
+			}
+			var stringLen uint64
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				stringLen |= (uint64(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			intStringLen := int(stringLen)
+			if intStringLen < 0 {
+				return ErrInvalidLengthRequiredexample
+			}
+			postIndex := iNdEx + intStringLen
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			s := string(data[iNdEx:postIndex])
+			m.Field14 = &s
+			iNdEx = postIndex
+			hasFields[0] |= uint64(0x00002000)
+		case 15:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Field15", wireType)
+			}
+			var byteLen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				byteLen |= (int(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if byteLen < 0 {
+				return ErrInvalidLengthRequiredexample
+			}
+			postIndex := iNdEx + byteLen
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.Field15 = append([]byte{}, data[iNdEx:postIndex]...)
+			iNdEx = postIndex
+			hasFields[0] |= uint64(0x00004000)
+		default:
+			iNdEx = preIndex
+			skippy, err := skipRequiredexample(data[iNdEx:])
+			if err != nil {
+				return err
+			}
+			if skippy < 0 {
+				return ErrInvalidLengthRequiredexample
+			}
+			if (iNdEx + skippy) > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.XXX_unrecognized = append(m.XXX_unrecognized, data[iNdEx:iNdEx+skippy]...)
+			iNdEx += skippy
+		}
+	}
+	if hasFields[0]&uint64(0x00000001) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field1")
+	}
+	if hasFields[0]&uint64(0x00000002) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field2")
+	}
+	if hasFields[0]&uint64(0x00000004) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field3")
+	}
+	if hasFields[0]&uint64(0x00000008) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field4")
+	}
+	if hasFields[0]&uint64(0x00000010) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field5")
+	}
+	if hasFields[0]&uint64(0x00000020) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field6")
+	}
+	if hasFields[0]&uint64(0x00000040) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field7")
+	}
+	if hasFields[0]&uint64(0x00000080) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field8")
+	}
+	if hasFields[0]&uint64(0x00000100) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field9")
+	}
+	if hasFields[0]&uint64(0x00000200) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field10")
+	}
+	if hasFields[0]&uint64(0x00000400) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field11")
+	}
+	if hasFields[0]&uint64(0x00000800) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field12")
+	}
+	if hasFields[0]&uint64(0x00001000) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field13")
+	}
+	if hasFields[0]&uint64(0x00002000) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field14")
+	}
+	if hasFields[0]&uint64(0x00004000) == 0 {
+		return github_com_gogo_protobuf_proto.NewRequiredNotSetError("Field15")
+	}
+
+	if iNdEx > l {
+		return io.ErrUnexpectedEOF
+	}
+	return nil
+}
+func (m *NestedNinOptNative) Unmarshal(data []byte) error {
+	l := len(data)
+	iNdEx := 0
+	for iNdEx < l {
+		preIndex := iNdEx
+		var wire uint64
+		for shift := uint(0); ; shift += 7 {
+			if shift >= 64 {
+				return ErrIntOverflowRequiredexample
+			}
+			if iNdEx >= l {
+				return io.ErrUnexpectedEOF
+			}
+			b := data[iNdEx]
+			iNdEx++
+			wire |= (uint64(b) & 0x7F) << shift
+			if b < 0x80 {
+				break
+			}
+		}
+		fieldNum := int32(wire >> 3)
+		wireType := int(wire & 0x7)
+		if wireType == 4 {
+			return fmt.Errorf("proto: NestedNinOptNative: wiretype end group for non-group")
+		}
+		if fieldNum <= 0 {
+			return fmt.Errorf("proto: NestedNinOptNative: illegal tag %d (wire type %d)", fieldNum, wire)
+		}
+		switch fieldNum {
+		case 1:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field NestedNinOpts", wireType)
+			}
+			var msglen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				msglen |= (int(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if msglen < 0 {
+				return ErrInvalidLengthRequiredexample
+			}
+			postIndex := iNdEx + msglen
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.NestedNinOpts = append(m.NestedNinOpts, &NinOptNative{})
+			if err := m.NestedNinOpts[len(m.NestedNinOpts)-1].Unmarshal(data[iNdEx:postIndex]); err != nil {
+				return err
+			}
+			iNdEx = postIndex
+		default:
+			iNdEx = preIndex
+			skippy, err := skipRequiredexample(data[iNdEx:])
+			if err != nil {
+				return err
+			}
+			if skippy < 0 {
+				return ErrInvalidLengthRequiredexample
+			}
+			if (iNdEx + skippy) > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.XXX_unrecognized = append(m.XXX_unrecognized, data[iNdEx:iNdEx+skippy]...)
+			iNdEx += skippy
+		}
+	}
+
+	if iNdEx > l {
+		return io.ErrUnexpectedEOF
+	}
+	return nil
+}
+func skipRequiredexample(data []byte) (n int, err error) {
+	l := len(data)
+	iNdEx := 0
+	for iNdEx < l {
+		var wire uint64
+		for shift := uint(0); ; shift += 7 {
+			if shift >= 64 {
+				return 0, ErrIntOverflowRequiredexample
+			}
+			if iNdEx >= l {
+				return 0, io.ErrUnexpectedEOF
+			}
+			b := data[iNdEx]
+			iNdEx++
+			wire |= (uint64(b) & 0x7F) << shift
+			if b < 0x80 {
+				break
+			}
+		}
+		wireType := int(wire & 0x7)
+		switch wireType {
+		case 0:
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return 0, ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return 0, io.ErrUnexpectedEOF
+				}
+				iNdEx++
+				if data[iNdEx-1] < 0x80 {
+					break
+				}
+			}
+			return iNdEx, nil
+		case 1:
+			iNdEx += 8
+			return iNdEx, nil
+		case 2:
+			var length int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return 0, ErrIntOverflowRequiredexample
+				}
+				if iNdEx >= l {
+					return 0, io.ErrUnexpectedEOF
+				}
+				b := data[iNdEx]
+				iNdEx++
+				length |= (int(b) & 0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			iNdEx += length
+			if length < 0 {
+				return 0, ErrInvalidLengthRequiredexample
+			}
+			return iNdEx, nil
+		case 3:
+			for {
+				var innerWire uint64
+				var start int = iNdEx
+				for shift := uint(0); ; shift += 7 {
+					if shift >= 64 {
+						return 0, ErrIntOverflowRequiredexample
+					}
+					if iNdEx >= l {
+						return 0, io.ErrUnexpectedEOF
+					}
+					b := data[iNdEx]
+					iNdEx++
+					innerWire |= (uint64(b) & 0x7F) << shift
+					if b < 0x80 {
+						break
+					}
+				}
+				innerWireType := int(innerWire & 0x7)
+				if innerWireType == 4 {
+					break
+				}
+				next, err := skipRequiredexample(data[start:])
+				if err != nil {
+					return 0, err
+				}
+				iNdEx = start + next
+			}
+			return iNdEx, nil
+		case 4:
+			return iNdEx, nil
+		case 5:
+			iNdEx += 4
+			return iNdEx, nil
+		default:
+			return 0, fmt.Errorf("proto: illegal wireType %d", wireType)
+		}
+	}
+	panic("unreachable")
+}
+
+var (
+	ErrInvalidLengthRequiredexample = fmt.Errorf("proto: negative length found during unmarshaling")
+	ErrIntOverflowRequiredexample   = fmt.Errorf("proto: integer overflow")
+)
